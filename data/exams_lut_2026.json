@@ -1,0 +1,73 @@
+{
+  "student": {
+    "home_city": "Lappeenranta",
+    "start_date": "2026-10-21",
+    "daily_hours": 4,
+    "block_hours": 2,
+    "day_start": "09:00",
+    "rest_weekdays": ["sun"],
+    "blocked_dates": [],
+    "fill_free_time": true
+  },
+  "exams": [
+    {
+      "name": "Integral Calculus",
+      "credits": 3,
+      "category": "math_computational",
+      "date": "2026-11-30",
+      "start": "16:30",
+      "duration_h": 3,
+      "university": "LUT",
+      "city": "Lappeenranta"
+    },
+    {
+      "name": "Statistics II",
+      "credits": 4,
+      "category": "statistics",
+      "date": "2026-11-30",
+      "start": "16:30",
+      "duration_h": 3,
+      "university": "LUT",
+      "city": "Lappeenranta"
+    },
+    {
+      "name": "Differential Calculus",
+      "credits": 5,
+      "category": "math_computational",
+      "date": "2026-12-16",
+      "start": "16:30",
+      "duration_h": 3,
+      "university": "LUT",
+      "city": "Lappeenranta"
+    },
+    {
+      "name": "Fundamentals of AI",
+      "credits": 6,
+      "category": "conceptual",
+      "date": "2026-12-22",
+      "start": "08:00",
+      "duration_h": 3,
+      "university": "LUT",
+      "city": "Lahti"
+    },
+    {
+      "name": "Probabilistic Simulation",
+      "credits": 5,
+      "category": "statistics",
+      "date": "2026-12-22",
+      "start": "16:30",
+      "duration_h": 3,
+      "university": "LUT",
+      "city": "Lappeenranta"
+    },
+    {
+      "name": "Advanced Computer Networks",
+      "credits": 3,
+      "category": "conceptual",
+      "date": null,
+      "assumed_date": "2026-12-18",
+      "university": "LUT",
+      "city": "Lahti"
+    }
+  ]
+}
