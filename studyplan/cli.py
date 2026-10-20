@@ -1,0 +1,86 @@
+"""Command line interface.
+
+    python -m studyplan plan data/exams_lut_2026.json --md plan.md --ics plan.ics
+    python -m studyplan docs slides.pdf exam_2025.pdf
+"""
+
+from __future__ import annotations
+
+import argparse
+import sys
+from datetime import date
+from pathlib import Path
+
+from . import estimator, logistics, scheduler
+from .documents import estimate_documents
+from .export import to_ics, to_markdown
+from .models import load
+
+
+def cmd_plan(args: argparse.Namespace) -> int:
+    profile, exams = load(args.input)
+    if args.start:
+        profile.start_date = date.fromisoformat(args.start)
+    if args.hours:
+        profile.daily_hours = args.hours
+
+    base = Path(args.input).parent
+    estimates, doc_notes = [], []
+    for exam in exams:
+        docs = None
+        paths = [base / p for p in exam.documents]
+        missing = [p for p in paths if not p.exists()]
+        if missing:
+            doc_notes.append(f"{exam.name}: documents not found: {', '.join(p.name for p in missing)}")
+        found = [p for p in paths if p.exists()]
+        if found:
+            docs = estimate_documents(found, category=exam.category)
+        estimates.append(estimator.estimate(exam, docs))
+
+    needed = {e.exam: e.hours for e in estimates}
+    plan = scheduler.schedule(profile, exams, needed)
+    notes = logistics.check(profile, exams) + doc_notes
+    markdown = to_markdown(plan, exams, estimates, notes)
+
+    if args.md:
+        Path(args.md).write_text(markdown, encoding="utf-8")
+        print(f"Markdown plan written to {args.md}")
+    if args.ics:
+        Path(args.ics).write_text(to_ics(plan, exams), encoding="utf-8", newline="")
+        print(f"Calendar written to {args.ics}")
+    if not args.md:
+        sys.stdout.reconfigure(encoding="utf-8")
+        print(markdown)
+    return 0
+
+
+def cmd_docs(args: argparse.Namespace) -> int:
+    result = estimate_documents(args.files, category=args.category)
+    print(f"Category: {result.category}  (keyword scores: {result.scores})")
+    for d in result.docs:
+        kind = "past exam" if d.is_past_exam else "material"
+        print(f"  {Path(d.path).name}: {d.pages} pages, {d.exercises} exercises, "
+              f"{d.formula_marks} formula marks ({kind})")
+    print(f"Estimated study time from these documents: {result.hours:.1f} h")
+    return 0
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(prog="studyplan", description="Exam-aware study planner")
+    sub = parser.add_subparsers(dest="command", required=True)
+
+    p = sub.add_parser("plan", help="generate a study plan from an exams JSON file")
+    p.add_argument("input")
+    p.add_argument("--start", help="first study day (YYYY-MM-DD), overrides the file")
+    p.add_argument("--hours", type=float, help="study hours per day, overrides the file")
+    p.add_argument("--md", help="write the plan as Markdown to this file")
+    p.add_argument("--ics", help="write the plan as an .ics calendar to this file")
+    p.set_defaults(func=cmd_plan)
+
+    d = sub.add_parser("docs", help="estimate study hours from course documents")
+    d.add_argument("files", nargs="+")
+    d.add_argument("--category", help="force a category instead of detecting it")
+    d.set_defaults(func=cmd_docs)
+
+    args = parser.parse_args(argv)
+    return args.func(args)
