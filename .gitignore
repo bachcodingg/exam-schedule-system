@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+build/
+dist/
+
+# Generated plans
+plan.md
+*.ics
+
+# Your own course material (keep it out of the repo)
+documents/
