@@ -1,0 +1,25 @@
+[project]
+name = "exam-schedule-system"
+version = "0.1.0"
+description = "Exam-aware study planner: estimates workload per exam and builds a day-by-day study plan"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+documents = ["pypdf>=4.0", "python-pptx>=0.6.23"]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+studyplan = "studyplan.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["studyplan"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
