@@ -1,0 +1,99 @@
+"""Render a plan as Markdown or as an .ics calendar file."""
+
+from __future__ import annotations
+
+from collections import defaultdict
+from datetime import date, datetime, timedelta, timezone
+
+from .estimator import Estimate
+from .models import Exam, Plan
+
+KIND_LABEL = {"learn": "Learn", "review": "Review", "mock": "Mock exam", "practice": "Practice"}
+DAY_LABEL = {"buffer": "Buffer / rest", "blocked": "Blocked", "exam": "EXAM"}
+
+
+def to_markdown(plan: Plan, exams: list[Exam], estimates: list[Estimate], notes: list[str]) -> str:
+    lines = ["# Study plan", ""]
+    lines += ["| Exam | Credits | Date | Place | Estimated h | Planned h |", "|---|---|---|---|---|---|"]
+    for exam in sorted(exams, key=lambda e: e.exam_date):
+        when = f"{exam.exam_date:%a %d.%m}" + (f" {exam.start:%H:%M}" if exam.start else "")
+        if not exam.date_confirmed:
+            when += " (assumed)"
+        lines.append(
+            f"| {exam.name} | {exam.credits:g} | {when} | {exam.location} | "
+            f"{plan.needed[exam.name]:.0f} | {plan.scheduled[exam.name]:.0f} |"
+        )
+
+    if plan.warnings or notes:
+        lines += ["", "## Warnings and logistics", ""]
+        lines += [f"- {w}" for w in plan.warnings + notes]
+
+    lines += ["", "## How the estimates were made", ""]
+    lines += [f"- **{e.exam}** ({e.source}): {e.detail}" for e in estimates]
+
+    lines += ["", "## Weekly overview (hours)", ""]
+    names = [e.name for e in sorted(exams, key=lambda e: e.exam_date)]
+    lines += ["| Week of | " + " | ".join(names) + " |", "|---" * (len(names) + 1) + "|"]
+    for monday, hours in sorted(weekly_hours(plan).items()):
+        lines.append(f"| {monday:%d.%m} | " + " | ".join(f"{hours.get(n, 0):g}" for n in names) + " |")
+
+    lines += ["", "## Day by day", ""]
+    exam_by_day = defaultdict(list)
+    for exam in exams:
+        exam_by_day[exam.exam_date].append(exam)
+    for day, kind in sorted(plan.day_kinds.items()):
+        if kind == "exam":
+            held = ", ".join(
+                f"{e.name}" + (f" {e.start:%H:%M}" if e.start else "") + f" ({e.location.city})"
+                for e in exam_by_day[day]
+            )
+            lines.append(f"- **{day:%a %d.%m} - EXAM: {held}**")
+        elif kind in DAY_LABEL:
+            lines.append(f"- {day:%a %d.%m} - {DAY_LABEL[kind]}")
+        else:
+            blocks = "; ".join(
+                f"{s.start:%H:%M}-{s.end():%H:%M} {KIND_LABEL[s.kind]}: {s.exam}" for s in plan.sessions_on(day)
+            )
+            lines.append(f"- {day:%a %d.%m} - {blocks}")
+    return "\n".join(lines) + "\n"
+
+
+def weekly_hours(plan: Plan) -> dict[date, dict[str, float]]:
+    weeks: dict[date, dict[str, float]] = defaultdict(lambda: defaultdict(float))
+    for s in plan.sessions:
+        monday = s.day - timedelta(days=s.day.weekday())
+        weeks[monday][s.exam] += s.hours
+    return weeks
+
+
+def _ics_time(moment: datetime) -> str:
+    return moment.strftime("%Y%m%dT%H%M%S")
+
+
+def _event(uid: str, start: datetime, end: datetime, summary: str, location: str = "") -> list[str]:
+    return [
+        "BEGIN:VEVENT",
+        f"UID:{uid}@exam-schedule-system",
+        f"DTSTAMP:{datetime.now(timezone.utc):%Y%m%dT%H%M%SZ}",
+        f"DTSTART;TZID=Europe/Helsinki:{_ics_time(start)}",
+        f"DTEND;TZID=Europe/Helsinki:{_ics_time(end)}",
+        f"SUMMARY:{summary}",
+        f"LOCATION:{location}",
+        "END:VEVENT",
+    ]
+
+
+def to_ics(plan: Plan, exams: list[Exam]) -> str:
+    lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//exam-schedule-system//EN", "CALSCALE:GREGORIAN"]
+    for i, s in enumerate(plan.sessions):
+        start = datetime.combine(s.day, s.start)
+        end = start + timedelta(hours=s.hours)
+        lines += _event(f"s{i}-{s.day:%Y%m%d}", start, end, f"{KIND_LABEL[s.kind]}: {s.exam}")
+    for i, exam in enumerate(exams):
+        if exam.starts_at():
+            lines += _event(
+                f"e{i}-{exam.exam_date:%Y%m%d}", exam.starts_at(), exam.ends_at(),
+                f"EXAM: {exam.name}", str(exam.location),
+            )
+    lines.append("END:VCALENDAR")
+    return "\r\n".join(lines) + "\r\n"
