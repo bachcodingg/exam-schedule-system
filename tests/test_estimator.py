@@ -1,6 +1,6 @@
 from datetime import date
 
-from studyplan.documents import DocEstimate
+from studyplan.documents import DocEstimate, DocStats
 from studyplan.estimator import estimate
 from studyplan.models import Exam, Location
 
@@ -29,8 +29,18 @@ def test_manual_hours_win():
     assert result.hours == 10 and result.source == "manual"
 
 
+def doc(kind: str) -> DocStats:
+    return DocStats("f.pdf", pages=5, words=900, exercises=3, formula_marks=0,
+                    is_past_exam=kind == "past exam", kind=kind)
+
+
 def test_documents_are_blended_in():
-    docs = DocEstimate("statistics", hours=100, scores={})
+    docs = DocEstimate("statistics", hours=100, scores={}, docs=[doc("material")])
     result = estimate(make(), docs)
     assert result.source == "credits+documents"
     assert 42.5 < result.hours < 100
+
+
+def test_past_exams_alone_never_lower_the_estimate():
+    docs = DocEstimate("statistics", hours=9, scores={}, docs=[doc("past exam"), doc("reference")])
+    assert estimate(make(), docs).hours == 42.5

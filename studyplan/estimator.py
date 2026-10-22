@@ -52,6 +52,11 @@ def estimate(exam: Exam, docs: DocEstimate | None = None) -> Estimate:
 
     # The documents measure the material itself, so difficulty is already reflected in them.
     from_docs = docs.hours * knowledge * target
+    if not docs.has_material:
+        # Past exams alone measure the practice, not the learning, so they can only add time.
+        hours = max(from_credits, from_docs)
+        detail += f"; documents ({docs.summary()}, no course material) suggest {from_docs:.1f} h -> {hours:.1f} h"
+        return Estimate(exam.name, round(hours, 1), "credits+documents", detail)
     blended = (1 - DOCUMENT_WEIGHT) * from_credits + DOCUMENT_WEIGHT * from_docs
     detail += (
         f"; documents ({docs.summary()}) suggest {from_docs:.1f} h -> blended {blended:.1f} h"

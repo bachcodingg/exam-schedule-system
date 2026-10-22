@@ -90,6 +90,11 @@ class DocEstimate:
     docs: list[DocStats] = field(default_factory=list)
     skipped: list[str] = field(default_factory=list)
 
+    @property
+    def has_material(self) -> bool:
+        """False when only past exams and reference sheets were given (nothing to learn from)."""
+        return any(d.kind in ("material", "solutions") for d in self.docs)
+
     def summary(self) -> str:
         past = sum(d.is_past_exam for d in self.docs)
         tasks = sum(d.exercises for d in self.docs if not d.is_past_exam)
