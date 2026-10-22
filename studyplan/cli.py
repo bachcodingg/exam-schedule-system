@@ -17,6 +17,20 @@ from .export import to_ics, to_markdown
 from .models import load
 
 
+def expand_documents(base: Path, entries: list[str]) -> list[Path]:
+    """Entries are files, folders (every file inside) or glob patterns, relative to `base`."""
+    paths = []
+    for entry in entries:
+        path = base / entry
+        if path.is_dir():
+            paths += sorted(p for p in path.iterdir() if p.is_file())
+        elif any(ch in entry for ch in "*?["):
+            paths += sorted(p for p in base.glob(entry) if p.is_file())
+        else:
+            paths.append(path)
+    return paths
+
+
 def cmd_plan(args: argparse.Namespace) -> int:
     profile, exams = load(args.input)
     if args.start:
@@ -28,7 +42,7 @@ def cmd_plan(args: argparse.Namespace) -> int:
     estimates, doc_notes = [], []
     for exam in exams:
         docs = None
-        paths = [base / p for p in exam.documents]
+        paths = expand_documents(base, exam.documents)
         missing = [p for p in paths if not p.exists()]
         if missing:
             doc_notes.append(f"{exam.name}: documents not found: {', '.join(p.name for p in missing)}")
