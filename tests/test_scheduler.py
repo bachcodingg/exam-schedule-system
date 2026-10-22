@@ -2,7 +2,7 @@ from datetime import date, time, timedelta
 from pathlib import Path
 
 from studyplan import estimator, scheduler, timeline
-from studyplan.models import Exam, Location, Profile, load
+from studyplan.models import Exam, Location, Profile, Topic, load
 
 DATA = Path(__file__).parent.parent / "data" / "exams_lut_2026.json"
 
@@ -59,3 +59,45 @@ def test_shortfall_is_reported():
     exam = Exam("Huge", 10, Location("LUT", "Lappeenranta"), date=start + timedelta(days=5))
     plan = scheduler.schedule(profile, [exam], {"Huge": 100})
     assert any("Not enough time" in w for w in plan.warnings)
+
+
+def three_exams(**extra):
+    profile = Profile(home_city="Lappeenranta", start_date=date(2026, 11, 2))
+    lut = Location("LUT", "Lappeenranta")
+    exams = [
+        Exam("A", 3, lut, date=date(2026, 11, 30), start=time(16, 30), **extra),
+        Exam("B", 3, lut, date=date(2026, 12, 1), **extra),
+    ]
+    return profile, exams
+
+
+def test_back_to_back_exam_gets_an_earlier_review_day():
+    profile, exams = three_exams()
+    days = {d.date: d for d in timeline.build(profile, exams)}
+    assert days[date(2026, 11, 29)].exams == ["A"]
+    assert days[date(2026, 11, 28)].kind == "review" and days[date(2026, 11, 28)].exams == ["B"]
+    plan = scheduler.schedule(profile, exams, {"A": 10, "B": 10})
+    assert not [s for s in plan.sessions if s.exam == "B" and s.day > date(2026, 11, 28)]
+
+
+def test_several_mocks_are_spaced_out():
+    profile, exams = three_exams(mocks=3)
+    plan = scheduler.schedule(profile, exams, {"A": 10, "B": 10})
+    days = sorted(s.day for s in plan.sessions if s.exam == "A" and s.kind == "mock")
+    assert len(days) == 3
+    assert all((b - a).days >= scheduler.MOCK_GAP_DAYS for a, b in zip(days, days[1:]))
+    assert all(s.start == time(16, 30) for s in plan.sessions if s.exam == "A" and s.kind == "mock")
+
+
+def test_topics_follow_their_order_and_weight():
+    profile, exams = three_exams()
+    exams[0].topics = [Topic("first", 1), Topic("big", 3)]
+    plan = scheduler.schedule(profile, exams, {"A": 16, "B": 10})
+    learn = sorted((s for s in plan.sessions if s.exam == "A" and s.kind == "learn"), key=lambda s: s.day)
+    assert learn[0].topic == "first"
+    assert learn[-1].topic == "big"
+    big = sum(s.hours for s in learn if s.topic == "big")
+    first = sum(s.hours for s in learn if s.topic == "first")
+    assert big > 2 * first
+    practice = [s for s in plan.sessions if s.exam == "A" and s.kind == "practice"]
+    assert practice and all(s.topic in ("first", "big", "first + big") for s in practice)

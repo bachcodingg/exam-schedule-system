@@ -1,13 +1,14 @@
 """Greedy least-slack scheduler.
 
 1. Review days (the day before an exam) are reserved for that exam.
-2. One mock exam per exam is placed on the last study day before its review day,
-   at the real exam start time.
+2. `exam.mocks` mock exams per exam are placed on the last study days before its
+   review day, MOCK_GAP_DAYS apart, at the real exam start time.
 3. Every other study block goes to the exam with the highest urgency
    (remaining hours / study hours left before it), and the two blocks of a day
    go to different exams whenever possible (interleaving).
 4. Time left over after all estimates are met becomes extra practice for the
    exam that is least ahead of its estimate.
+5. Learn sessions are labelled with the exam's topics in order, split by weight.
 """
 
 from __future__ import annotations
@@ -20,13 +21,24 @@ from .models import Exam, Plan, Profile, Session
 MOCK_SEARCH_DAYS = 10  # how far before the exam to look for a mock-exam day
 CRUNCH_URGENCY = 0.9  # above this an exam may take both blocks of a day
 BREAK_HOURS = 0.5
+MOCK_GAP_DAYS = 2  # at least this many days between two mocks of the same exam
+TOPIC_MIN_HOURS = 0.5  # a topic is named on a session if it fills this much of it
+SESSION_TOPIC = {
+    "review": "formula sheet, mistakes log, one timed problem per topic",
+    "mock": "full past exam, timed, closed book, then mark it",
+    "practice": "mixed past-exam problems, weakest topics first",
+}
 
 
 def schedule(profile: Profile, exams: list[Exam], needed: dict[str, float]) -> Plan:
     days = timeline.build(profile, exams)
     by_name = {e.name: e for e in exams}
+    reviews = timeline.review_dates(days)
+    # Last date on which an exam can still get study blocks (its review day is exclusive).
+    cutoff = {e.name: reviews.get(e.name, e.exam_date - timedelta(days=1)) for e in exams}
     remaining = dict(needed)
     picks: dict[date, list[tuple[str, str, float]]] = {}  # day -> [(exam, kind, hours)]
+    warnings_early: list[str] = []
 
     # 1. Review days.
     for day in days:
@@ -39,19 +51,26 @@ def schedule(profile: Profile, exams: list[Exam], needed: dict[str, float]) -> P
 
     study_days = [d for d in days if d.kind == "study"]
 
-    # 2. Mock exams.
+    # 2. Mock exams, the last one as close to the exam as possible, earlier ones spaced out.
     mocks: dict[date, list[str]] = {}
     for exam in sorted(exams, key=lambda e: e.exam_date):
+        search_days = MOCK_SEARCH_DAYS + MOCK_GAP_DAYS * (exam.mocks - 1)
+        placed: list[date] = []
         for day in reversed(study_days):
-            too_late = day.date >= exam.exam_date - timedelta(days=1)
-            too_early = day.date < exam.exam_date - timedelta(days=MOCK_SEARCH_DAYS)
-            if too_late or too_early or len(mocks.get(day.date, [])) >= len(day.blocks):
+            if len(placed) >= exam.mocks:
+                break
+            too_late = day.date >= cutoff[exam.name]
+            too_early = day.date < exam.exam_date - timedelta(days=search_days)
+            too_close = any(abs((day.date - p).days) < MOCK_GAP_DAYS for p in placed)
+            if too_late or too_early or too_close or len(mocks.get(day.date, [])) >= len(day.blocks):
                 continue
             mocks.setdefault(day.date, []).append(exam.name)
-            break
+            placed.append(day.date)
+        if len(placed) < exam.mocks:
+            warnings_early.append(f"{exam.name}: only {len(placed)} of {exam.mocks} mock exams fit.")
 
     def urgency(name: str, today: date) -> float:
-        left = timeline.study_hours_between(days, today, by_name[name].exam_date - timedelta(days=1))
+        left = timeline.study_hours_between(days, today, cutoff[name])
         return remaining[name] / left if left > 0 else float("inf")
 
     # 3. Regular blocks.
@@ -65,7 +84,7 @@ def schedule(profile: Profile, exams: list[Exam], needed: dict[str, float]) -> P
         for hours in open_blocks:
             candidates = [
                 n for n in remaining
-                if remaining[n] > 0.01 and day.date < by_name[n].exam_date - timedelta(days=1)
+                if remaining[n] > 0.01 and day.date < cutoff[n]
             ]
             if not candidates:
                 chosen.append(("", "free", hours))
@@ -82,9 +101,9 @@ def schedule(profile: Profile, exams: list[Exam], needed: dict[str, float]) -> P
 
     # 4. Fill free blocks with practice.
     if profile.fill_free_time:
-        _fill_free_blocks(picks, exams, needed)
+        _fill_free_blocks(picks, exams, needed, cutoff)
 
-    warnings = feasibility.check(profile, exams, needed, days)
+    warnings = feasibility.check(profile, exams, needed, days) + warnings_early
     for name, left in remaining.items():
         if left > 0.5:
             warnings.append(f"{name}: {left:.1f} h of the estimate could not be scheduled.")
@@ -92,6 +111,7 @@ def schedule(profile: Profile, exams: list[Exam], needed: dict[str, float]) -> P
     sessions = []
     for day in days:
         sessions.extend(_place(day.date, picks.get(day.date, []), by_name, profile))
+    _label_topics(sessions, exams)
 
     scheduled = {e.name: 0.0 for e in exams}
     for s in sessions:
@@ -99,7 +119,12 @@ def schedule(profile: Profile, exams: list[Exam], needed: dict[str, float]) -> P
     return Plan(sessions, dict(needed), scheduled, {d.date: d.kind for d in days}, warnings)
 
 
-def _fill_free_blocks(picks: dict[date, list[tuple[str, str, float]]], exams: list[Exam], needed: dict[str, float]) -> None:
+def _fill_free_blocks(
+    picks: dict[date, list[tuple[str, str, float]]],
+    exams: list[Exam],
+    needed: dict[str, float],
+    cutoff: dict[str, date],
+) -> None:
     totals = {e.name: 0.0 for e in exams}
     for chosen in picks.values():
         for name, kind, hours in chosen:
@@ -111,13 +136,49 @@ def _fill_free_blocks(picks: dict[date, list[tuple[str, str, float]]], exams: li
             if kind != "free":
                 continue
             used = {c[0] for c in chosen}
-            open_exams = [e for e in exams if day < e.exam_date - timedelta(days=1)]
+            open_exams = [e for e in exams if day < cutoff[e.name]]
             if not open_exams:
                 continue
             # The exam whose plan is least ahead of its estimate, preferring one not already today.
             pick = min(open_exams, key=lambda e: (e.name in used, totals[e.name] / max(needed[e.name], 1)))
             chosen[i] = (pick.name, "practice", hours)
             totals[pick.name] += hours
+
+
+def _label_topics(sessions: list[Session], exams: list[Exam]) -> None:
+    """Walk each exam's learn sessions in date order and split them over its topics by weight.
+
+    Practice sessions get a second round over the same topics (spaced repetition).
+    A session gets every topic that covers at least TOPIC_MIN_HOURS of it, so a short topic
+    is never skipped. Review and mock sessions get a fixed description.
+    """
+    ordered = sorted(sessions, key=lambda s: (s.day, s.start))
+    for s in ordered:
+        s.topic = SESSION_TOPIC.get(s.kind)
+    for exam in exams:
+        if not exam.topics:
+            continue
+        for kind in ("learn", "practice"):
+            _split_over_topics([s for s in ordered if s.exam == exam.name and s.kind == kind], exam)
+
+
+def _split_over_topics(sessions: list[Session], exam: Exam) -> None:
+    total = sum(s.hours for s in sessions)
+    weights = sum(t.weight for t in exam.topics)
+    spans, begin = [], 0.0
+    for t in exam.topics:
+        end = begin + total * t.weight / weights
+        spans.append((begin, end, t.name))
+        begin = end
+    done = 0.0
+    for s in sessions:
+        covered = []
+        for b, e, name in spans:
+            overlap = min(e, done + s.hours) - max(b, done)
+            if overlap > 1e-9 and overlap >= min(TOPIC_MIN_HOURS, e - b) - 1e-9:
+                covered.append(name)
+        s.topic = " + ".join(covered) or spans[-1][2]
+        done += s.hours
 
 
 def _place(day: date, chosen: list[tuple[str, str, float]], by_name: dict[str, Exam], profile: Profile) -> list[Session]:

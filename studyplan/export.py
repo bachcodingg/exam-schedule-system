@@ -31,6 +31,16 @@ def to_markdown(plan: Plan, exams: list[Exam], estimates: list[Estimate], notes:
     lines += ["", "## How the estimates were made", ""]
     lines += [f"- **{e.exam}** ({e.source}): {e.detail}" for e in estimates]
 
+    for exam in sorted(exams, key=lambda e: e.exam_date):
+        if not exam.topics:
+            continue
+        lines += ["", f"## Topics: {exam.name}", "", "| Topic | Weight | Planned h | Dates |", "|---|---|---|---|"]
+        for topic in exam.topics:
+            hits = [s for s in plan.sessions if s.exam == exam.name and s.topic and topic.name in s.topic.split(" + ")]
+            when = f"{min(s.day for s in hits):%d.%m}-{max(s.day for s in hits):%d.%m}" if hits else "-"
+            hours = sum(s.hours / len(s.topic.split(" + ")) for s in hits)
+            lines.append(f"| {topic.name} | {topic.weight:g} | {hours:.1f} | {when} |")
+
     lines += ["", "## Weekly overview (hours)", ""]
     names = [e.name for e in sorted(exams, key=lambda e: e.exam_date)]
     lines += ["| Week of | " + " | ".join(names) + " |", "|---" * (len(names) + 1) + "|"]
@@ -52,7 +62,9 @@ def to_markdown(plan: Plan, exams: list[Exam], estimates: list[Estimate], notes:
             lines.append(f"- {day:%a %d.%m} - {DAY_LABEL[kind]}")
         else:
             blocks = "; ".join(
-                f"{s.start:%H:%M}-{s.end():%H:%M} {KIND_LABEL[s.kind]}: {s.exam}" for s in plan.sessions_on(day)
+                f"{s.start:%H:%M}-{s.end():%H:%M} {KIND_LABEL[s.kind]}: {s.exam}"
+                + (f" ({s.topic})" if s.topic else "")
+                for s in plan.sessions_on(day)
             )
             lines.append(f"- {day:%a %d.%m} - {blocks}")
     return "\n".join(lines) + "\n"
@@ -70,7 +82,10 @@ def _ics_time(moment: datetime) -> str:
     return moment.strftime("%Y%m%dT%H%M%S")
 
 
-def _event(uid: str, start: datetime, end: datetime, summary: str, location: str = "") -> list[str]:
+def _event(
+    uid: str, start: datetime, end: datetime, summary: str, location: str = "", description: str = ""
+) -> list[str]:
+    extra = [f"DESCRIPTION:{_ics_escape(description)}"] if description else []
     return [
         "BEGIN:VEVENT",
         f"UID:{uid}@exam-schedule-system",
@@ -79,8 +94,13 @@ def _event(uid: str, start: datetime, end: datetime, summary: str, location: str
         f"DTEND;TZID=Europe/Helsinki:{_ics_time(end)}",
         f"SUMMARY:{summary}",
         f"LOCATION:{location}",
+        *extra,
         "END:VEVENT",
     ]
+
+
+def _ics_escape(text: str) -> str:
+    return text.replace("\\", "\\\\").replace(";", "\\;").replace(",", "\\,")
 
 
 def to_ics(plan: Plan, exams: list[Exam]) -> str:
@@ -88,7 +108,9 @@ def to_ics(plan: Plan, exams: list[Exam]) -> str:
     for i, s in enumerate(plan.sessions):
         start = datetime.combine(s.day, s.start)
         end = start + timedelta(hours=s.hours)
-        lines += _event(f"s{i}-{s.day:%Y%m%d}", start, end, f"{KIND_LABEL[s.kind]}: {s.exam}")
+        lines += _event(
+            f"s{i}-{s.day:%Y%m%d}", start, end, f"{KIND_LABEL[s.kind]}: {s.exam}", description=s.topic or ""
+        )
     for i, exam in enumerate(exams):
         if exam.starts_at():
             lines += _event(

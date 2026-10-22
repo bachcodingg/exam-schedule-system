@@ -30,6 +30,12 @@ class Location:
 
 
 @dataclass
+class Topic:
+    name: str
+    weight: float = 1.0  # share of the study time, e.g. typical exam points
+
+
+@dataclass
 class Exam:
     name: str
     credits: float
@@ -44,6 +50,8 @@ class Exam:
     documents: list[str] = field(default_factory=list)
     assumed_date: date | None = None  # used while the real date is unknown
     hours: float | None = None  # manual override of the estimate
+    topics: list[Topic] = field(default_factory=list)  # study order, weighted by exam points
+    mocks: int = 1  # timed mock exams, e.g. one per past exam you have
 
     def __post_init__(self) -> None:
         if self.category not in CATEGORIES:
@@ -96,6 +104,7 @@ class Session:
     hours: float
     exam: str
     kind: str  # learn | review | mock | practice
+    topic: str | None = None
 
     def end(self) -> time:
         return (datetime.combine(self.day, self.start) + timedelta(hours=self.hours)).time()
@@ -123,6 +132,12 @@ def _parse_time(value: str | None) -> time | None:
 
 def _parse_weekday(value: int | str) -> int:
     return value if isinstance(value, int) else WEEKDAYS[value.lower()[:3]]
+
+
+def _parse_topic(value: str | dict) -> Topic:
+    if isinstance(value, str):
+        return Topic(value)
+    return Topic(value["name"], value.get("weight", 1.0))
 
 
 def load(path: str | Path) -> tuple[Profile, list[Exam]]:
@@ -154,6 +169,8 @@ def load(path: str | Path) -> tuple[Profile, list[Exam]]:
             documents=e.get("documents", []),
             assumed_date=_parse_date(e.get("assumed_date")),
             hours=e.get("hours"),
+            topics=[_parse_topic(t) for t in e.get("topics", [])],
+            mocks=e.get("mocks", 1),
         )
         for e in raw["exams"]
     ]

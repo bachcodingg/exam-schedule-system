@@ -32,6 +32,11 @@ def check(profile: Profile, exams: list[Exam]) -> list[str]:
                 f"{exam.name}: date not confirmed, planning with {exam.assumed_date:%d.%m}. "
                 "Update the input file when it is announced and re-run."
             )
+        elif exam.start is None:
+            notes.append(
+                f"{exam.name}: start time unknown, so its mock runs in a normal study block. "
+                "Add 'start' when it is announced and re-run."
+            )
 
     slots: dict[tuple, list[Exam]] = {}
     for exam in exams:
