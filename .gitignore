@@ -13,3 +13,9 @@ plan.md
 
 # Your own course material (keep it out of the repo)
 documents/
+
+# Course archives
+*.zip
+
+# The committed demo calendar
+!docs/demo/*.ics

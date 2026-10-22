@@ -1,0 +1,615 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//exam-schedule-system//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:s0-20261023@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261023T090000
+DTEND;TZID=Europe/Helsinki:20261023T110000
+SUMMARY:Learn: Matrix Algebra
+LOCATION:
+DESCRIPTION:Proof rules\, subspaces\, sums\, unions\, counterexamples
+END:VEVENT
+BEGIN:VEVENT
+UID:s1-20261023@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261023T113000
+DTEND;TZID=Europe/Helsinki:20261023T133000
+SUMMARY:Learn: Integral Calculus
+LOCATION:
+DESCRIPTION:Techniques refresher: parts\, substitution\, trig identities + Definite integrals: absolute value\, piecewise\, substitution limits
+END:VEVENT
+BEGIN:VEVENT
+UID:s2-20261024@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261024T090000
+DTEND;TZID=Europe/Helsinki:20261024T110000
+SUMMARY:Learn: Matrix Algebra
+LOCATION:
+DESCRIPTION:Proof rules\, subspaces\, sums\, unions\, counterexamples
+END:VEVENT
+BEGIN:VEVENT
+UID:s3-20261024@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261024T113000
+DTEND;TZID=Europe/Helsinki:20261024T133000
+SUMMARY:Learn: Integral Calculus
+LOCATION:
+DESCRIPTION:Definite integrals: absolute value\, piecewise\, substitution limits
+END:VEVENT
+BEGIN:VEVENT
+UID:s4-20261026@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261026T090000
+DTEND;TZID=Europe/Helsinki:20261026T110000
+SUMMARY:Learn: Matrix Algebra
+LOCATION:
+DESCRIPTION:Proof rules\, subspaces\, sums\, unions\, counterexamples
+END:VEVENT
+BEGIN:VEVENT
+UID:s5-20261026@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261026T113000
+DTEND;TZID=Europe/Helsinki:20261026T133000
+SUMMARY:Learn: Statistics II
+LOCATION:
+DESCRIPTION:Priors: Bayes' theorem\, conjugate pairs\, Jeffreys\, hierarchical
+END:VEVENT
+BEGIN:VEVENT
+UID:s6-20261027@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261027T090000
+DTEND;TZID=Europe/Helsinki:20261027T110000
+SUMMARY:Learn: Matrix Algebra
+LOCATION:
+DESCRIPTION:Proof rules\, subspaces\, sums\, unions\, counterexamples + Independence\, basis\, dimension\, coordinates\, change of basis
+END:VEVENT
+BEGIN:VEVENT
+UID:s7-20261027@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261027T113000
+DTEND;TZID=Europe/Helsinki:20261027T133000
+SUMMARY:Learn: Integral Calculus
+LOCATION:
+DESCRIPTION:Solids of revolution: disk/washer/shell\, surface area\, mass
+END:VEVENT
+BEGIN:VEVENT
+UID:s8-20261028@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261028T090000
+DTEND;TZID=Europe/Helsinki:20261028T110000
+SUMMARY:Learn: Matrix Algebra
+LOCATION:
+DESCRIPTION:Independence\, basis\, dimension\, coordinates\, change of basis
+END:VEVENT
+BEGIN:VEVENT
+UID:s9-20261028@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261028T113000
+DTEND;TZID=Europe/Helsinki:20261028T133000
+SUMMARY:Learn: Statistics II
+LOCATION:
+DESCRIPTION:Priors: Bayes' theorem\, conjugate pairs\, Jeffreys\, hierarchical
+END:VEVENT
+BEGIN:VEVENT
+UID:s10-20261029@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261029T090000
+DTEND;TZID=Europe/Helsinki:20261029T110000
+SUMMARY:Learn: Matrix Algebra
+LOCATION:
+DESCRIPTION:Independence\, basis\, dimension\, coordinates\, change of basis
+END:VEVENT
+BEGIN:VEVENT
+UID:s11-20261029@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261029T113000
+DTEND;TZID=Europe/Helsinki:20261029T133000
+SUMMARY:Learn: Integral Calculus
+LOCATION:
+DESCRIPTION:Solids of revolution: disk/washer/shell\, surface area\, mass
+END:VEVENT
+BEGIN:VEVENT
+UID:s12-20261030@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261030T090000
+DTEND;TZID=Europe/Helsinki:20261030T110000
+SUMMARY:Learn: Matrix Algebra
+LOCATION:
+DESCRIPTION:Independence\, basis\, dimension\, coordinates\, change of basis + Systems\, inverse\, determinants\, Cramer\, dual vectors
+END:VEVENT
+BEGIN:VEVENT
+UID:s13-20261030@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261030T113000
+DTEND;TZID=Europe/Helsinki:20261030T133000
+SUMMARY:Learn: Statistics II
+LOCATION:
+DESCRIPTION:Likelihood: log-likelihood\, score equation\, MLE\, Fisher information
+END:VEVENT
+BEGIN:VEVENT
+UID:s14-20261031@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261031T090000
+DTEND;TZID=Europe/Helsinki:20261031T110000
+SUMMARY:Learn: Matrix Algebra
+LOCATION:
+DESCRIPTION:Systems\, inverse\, determinants\, Cramer\, dual vectors
+END:VEVENT
+BEGIN:VEVENT
+UID:s15-20261031@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261031T113000
+DTEND;TZID=Europe/Helsinki:20261031T133000
+SUMMARY:Learn: Integral Calculus
+LOCATION:
+DESCRIPTION:Parametric curves: area\, arc length\, surface of revolution
+END:VEVENT
+BEGIN:VEVENT
+UID:s16-20261102@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261102T090000
+DTEND;TZID=Europe/Helsinki:20261102T110000
+SUMMARY:Learn: Matrix Algebra
+LOCATION:
+DESCRIPTION:Systems\, inverse\, determinants\, Cramer\, dual vectors + Linear maps: kernel\, range\, rank-nullity\, injective/surjective
+END:VEVENT
+BEGIN:VEVENT
+UID:s17-20261102@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261102T113000
+DTEND;TZID=Europe/Helsinki:20261102T133000
+SUMMARY:Learn: Statistics II
+LOCATION:
+DESCRIPTION:Likelihood: log-likelihood\, score equation\, MLE\, Fisher information + MC & MCMC: Gaussian-Gaussian update\, Metropolis-Hastings\, acceptance rate
+END:VEVENT
+BEGIN:VEVENT
+UID:s18-20261103@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261103T090000
+DTEND;TZID=Europe/Helsinki:20261103T110000
+SUMMARY:Learn: Matrix Algebra
+LOCATION:
+DESCRIPTION:Linear maps: kernel\, range\, rank-nullity\, injective/surjective
+END:VEVENT
+BEGIN:VEVENT
+UID:s19-20261103@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261103T113000
+DTEND;TZID=Europe/Helsinki:20261103T133000
+SUMMARY:Learn: Integral Calculus
+LOCATION:
+DESCRIPTION:Polar curves: shapes\, area\, arc length\, inner loops
+END:VEVENT
+BEGIN:VEVENT
+UID:s20-20261104@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261104T090000
+DTEND;TZID=Europe/Helsinki:20261104T110000
+SUMMARY:Learn: Matrix Algebra
+LOCATION:
+DESCRIPTION:Linear maps: kernel\, range\, rank-nullity\, injective/surjective
+END:VEVENT
+BEGIN:VEVENT
+UID:s21-20261104@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261104T113000
+DTEND;TZID=Europe/Helsinki:20261104T133000
+SUMMARY:Learn: Statistics II
+LOCATION:
+DESCRIPTION:MC & MCMC: Gaussian-Gaussian update\, Metropolis-Hastings\, acceptance rate
+END:VEVENT
+BEGIN:VEVENT
+UID:s22-20261105@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261105T090000
+DTEND;TZID=Europe/Helsinki:20261105T110000
+SUMMARY:Learn: Matrix Algebra
+LOCATION:
+DESCRIPTION:Eigenvalues\, eigenbasis\, T^k by induction\, diagonalisation
+END:VEVENT
+BEGIN:VEVENT
+UID:s23-20261105@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261105T113000
+DTEND;TZID=Europe/Helsinki:20261105T133000
+SUMMARY:Learn: Integral Calculus
+LOCATION:
+DESCRIPTION:Polar curves: shapes\, area\, arc length\, inner loops + Probability densities: normalise\, E[X]\, CDF\, median
+END:VEVENT
+BEGIN:VEVENT
+UID:s24-20261106@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261106T090000
+DTEND;TZID=Europe/Helsinki:20261106T110000
+SUMMARY:Learn: Matrix Algebra
+LOCATION:
+DESCRIPTION:Eigenvalues\, eigenbasis\, T^k by induction\, diagonalisation
+END:VEVENT
+BEGIN:VEVENT
+UID:s25-20261106@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261106T113000
+DTEND;TZID=Europe/Helsinki:20261106T133000
+SUMMARY:Learn: Statistics II
+LOCATION:
+DESCRIPTION:MC & MCMC: Gaussian-Gaussian update\, Metropolis-Hastings\, acceptance rate + Model selection: AIC\, BIC\, Bayes factors\, Jeffreys scale\, BMA weights
+END:VEVENT
+BEGIN:VEVENT
+UID:s26-20261107@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261107T090000
+DTEND;TZID=Europe/Helsinki:20261107T110000
+SUMMARY:Learn: Matrix Algebra
+LOCATION:
+DESCRIPTION:Eigenvalues\, eigenbasis\, T^k by induction\, diagonalisation + Inner products\, Cauchy-Schwarz\, projection\, Gram-Schmidt\, least squares
+END:VEVENT
+BEGIN:VEVENT
+UID:s27-20261107@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261107T113000
+DTEND;TZID=Europe/Helsinki:20261107T133000
+SUMMARY:Learn: Integral Calculus
+LOCATION:
+DESCRIPTION:Probability densities: normalise\, E[X]\, CDF\, median
+END:VEVENT
+BEGIN:VEVENT
+UID:s28-20261109@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261109T090000
+DTEND;TZID=Europe/Helsinki:20261109T110000
+SUMMARY:Learn: Matrix Algebra
+LOCATION:
+DESCRIPTION:Inner products\, Cauchy-Schwarz\, projection\, Gram-Schmidt\, least squares
+END:VEVENT
+BEGIN:VEVENT
+UID:s29-20261109@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261109T113000
+DTEND;TZID=Europe/Helsinki:20261109T133000
+SUMMARY:Learn: Statistics II
+LOCATION:
+DESCRIPTION:Model selection: AIC\, BIC\, Bayes factors\, Jeffreys scale\, BMA weights
+END:VEVENT
+BEGIN:VEVENT
+UID:s30-20261110@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261110T090000
+DTEND;TZID=Europe/Helsinki:20261110T110000
+SUMMARY:Learn: Matrix Algebra
+LOCATION:
+DESCRIPTION:Inner products\, Cauchy-Schwarz\, projection\, Gram-Schmidt\, least squares
+END:VEVENT
+BEGIN:VEVENT
+UID:s31-20261110@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261110T113000
+DTEND;TZID=Europe/Helsinki:20261110T133000
+SUMMARY:Learn: Integral Calculus
+LOCATION:
+DESCRIPTION:Physical applications: centre of mass\, work\, related rates
+END:VEVENT
+BEGIN:VEVENT
+UID:s32-20261111@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261111T090000
+DTEND;TZID=Europe/Helsinki:20261111T110000
+SUMMARY:Learn: Statistics II
+LOCATION:
+DESCRIPTION:Time series: stationarity\, ACF/PACF to ARMA(p\,q)\, ARIMA/SARIMA
+END:VEVENT
+BEGIN:VEVENT
+UID:s33-20261111@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261111T113000
+DTEND;TZID=Europe/Helsinki:20261111T133000
+SUMMARY:Learn: Matrix Algebra
+LOCATION:
+DESCRIPTION:Inner products\, Cauchy-Schwarz\, projection\, Gram-Schmidt\, least squares
+END:VEVENT
+BEGIN:VEVENT
+UID:s34-20261112@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261112T090000
+DTEND;TZID=Europe/Helsinki:20261112T110000
+SUMMARY:Learn: Integral Calculus
+LOCATION:
+DESCRIPTION:Double integrals over polygonal regions
+END:VEVENT
+BEGIN:VEVENT
+UID:s35-20261112@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261112T113000
+DTEND;TZID=Europe/Helsinki:20261112T133000
+SUMMARY:Learn: Statistics II
+LOCATION:
+DESCRIPTION:Time series: stationarity\, ACF/PACF to ARMA(p\,q)\, ARIMA/SARIMA
+END:VEVENT
+BEGIN:VEVENT
+UID:s36-20261113@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261113T090000
+DTEND;TZID=Europe/Helsinki:20261113T110000
+SUMMARY:Practice: Matrix Algebra
+LOCATION:
+DESCRIPTION:Proof rules\, subspaces\, sums\, unions\, counterexamples
+END:VEVENT
+BEGIN:VEVENT
+UID:s37-20261113@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261113T113000
+DTEND;TZID=Europe/Helsinki:20261113T133000
+SUMMARY:Practice: Statistics II
+LOCATION:
+DESCRIPTION:Priors: Bayes' theorem\, conjugate pairs\, Jeffreys\, hierarchical
+END:VEVENT
+BEGIN:VEVENT
+UID:s38-20261114@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261114T090000
+DTEND;TZID=Europe/Helsinki:20261114T110000
+SUMMARY:Practice: Matrix Algebra
+LOCATION:
+DESCRIPTION:Proof rules\, subspaces\, sums\, unions\, counterexamples + Independence\, basis\, dimension\, coordinates\, change of basis
+END:VEVENT
+BEGIN:VEVENT
+UID:s39-20261114@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261114T113000
+DTEND;TZID=Europe/Helsinki:20261114T133000
+SUMMARY:Practice: Integral Calculus
+LOCATION:
+DESCRIPTION:Techniques refresher: parts\, substitution\, trig identities + Definite integrals: absolute value\, piecewise\, substitution limits
+END:VEVENT
+BEGIN:VEVENT
+UID:s40-20261116@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261116T090000
+DTEND;TZID=Europe/Helsinki:20261116T110000
+SUMMARY:Practice: Matrix Algebra
+LOCATION:
+DESCRIPTION:Independence\, basis\, dimension\, coordinates\, change of basis
+END:VEVENT
+BEGIN:VEVENT
+UID:s41-20261116@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261116T113000
+DTEND;TZID=Europe/Helsinki:20261116T133000
+SUMMARY:Practice: Statistics II
+LOCATION:
+DESCRIPTION:Likelihood: log-likelihood\, score equation\, MLE\, Fisher information
+END:VEVENT
+BEGIN:VEVENT
+UID:s42-20261117@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261117T090000
+DTEND;TZID=Europe/Helsinki:20261117T110000
+SUMMARY:Practice: Matrix Algebra
+LOCATION:
+DESCRIPTION:Independence\, basis\, dimension\, coordinates\, change of basis + Systems\, inverse\, determinants\, Cramer\, dual vectors
+END:VEVENT
+BEGIN:VEVENT
+UID:s43-20261117@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261117T113000
+DTEND;TZID=Europe/Helsinki:20261117T133000
+SUMMARY:Practice: Integral Calculus
+LOCATION:
+DESCRIPTION:Solids of revolution: disk/washer/shell\, surface area\, mass
+END:VEVENT
+BEGIN:VEVENT
+UID:s44-20261118@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261118T090000
+DTEND;TZID=Europe/Helsinki:20261118T110000
+SUMMARY:Practice: Matrix Algebra
+LOCATION:
+DESCRIPTION:Systems\, inverse\, determinants\, Cramer\, dual vectors + Linear maps: kernel\, range\, rank-nullity\, injective/surjective
+END:VEVENT
+BEGIN:VEVENT
+UID:s45-20261118@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261118T113000
+DTEND;TZID=Europe/Helsinki:20261118T133000
+SUMMARY:Practice: Statistics II
+LOCATION:
+DESCRIPTION:MC & MCMC: Gaussian-Gaussian update\, Metropolis-Hastings\, acceptance rate
+END:VEVENT
+BEGIN:VEVENT
+UID:s46-20261119@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261119T090000
+DTEND;TZID=Europe/Helsinki:20261119T110000
+SUMMARY:Practice: Matrix Algebra
+LOCATION:
+DESCRIPTION:Linear maps: kernel\, range\, rank-nullity\, injective/surjective
+END:VEVENT
+BEGIN:VEVENT
+UID:s47-20261119@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261119T113000
+DTEND;TZID=Europe/Helsinki:20261119T133000
+SUMMARY:Practice: Integral Calculus
+LOCATION:
+DESCRIPTION:Parametric curves: area\, arc length\, surface of revolution + Polar curves: shapes\, area\, arc length\, inner loops
+END:VEVENT
+BEGIN:VEVENT
+UID:s48-20261120@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261120T090000
+DTEND;TZID=Europe/Helsinki:20261120T110000
+SUMMARY:Practice: Matrix Algebra
+LOCATION:
+DESCRIPTION:Eigenvalues\, eigenbasis\, T^k by induction\, diagonalisation
+END:VEVENT
+BEGIN:VEVENT
+UID:s49-20261120@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261120T113000
+DTEND;TZID=Europe/Helsinki:20261120T133000
+SUMMARY:Practice: Statistics II
+LOCATION:
+DESCRIPTION:Model selection: AIC\, BIC\, Bayes factors\, Jeffreys scale\, BMA weights
+END:VEVENT
+BEGIN:VEVENT
+UID:s50-20261121@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261121T090000
+DTEND;TZID=Europe/Helsinki:20261121T110000
+SUMMARY:Practice: Matrix Algebra
+LOCATION:
+DESCRIPTION:Eigenvalues\, eigenbasis\, T^k by induction\, diagonalisation + Inner products\, Cauchy-Schwarz\, projection\, Gram-Schmidt\, least squares
+END:VEVENT
+BEGIN:VEVENT
+UID:s51-20261121@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261121T113000
+DTEND;TZID=Europe/Helsinki:20261121T133000
+SUMMARY:Practice: Integral Calculus
+LOCATION:
+DESCRIPTION:Probability densities: normalise\, E[X]\, CDF\, median
+END:VEVENT
+BEGIN:VEVENT
+UID:s52-20261123@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261123T163000
+DTEND;TZID=Europe/Helsinki:20261123T183000
+SUMMARY:Mock exam: Integral Calculus
+LOCATION:
+DESCRIPTION:full past exam\, timed\, closed book\, then mark it
+END:VEVENT
+BEGIN:VEVENT
+UID:s53-20261123@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261123T090000
+DTEND;TZID=Europe/Helsinki:20261123T110000
+SUMMARY:Practice: Matrix Algebra
+LOCATION:
+DESCRIPTION:Inner products\, Cauchy-Schwarz\, projection\, Gram-Schmidt\, least squares
+END:VEVENT
+BEGIN:VEVENT
+UID:s54-20261124@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261124T090000
+DTEND;TZID=Europe/Helsinki:20261124T110000
+SUMMARY:Mock exam: Matrix Algebra
+LOCATION:
+DESCRIPTION:full past exam\, timed\, closed book\, then mark it
+END:VEVENT
+BEGIN:VEVENT
+UID:s55-20261124@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261124T113000
+DTEND;TZID=Europe/Helsinki:20261124T133000
+SUMMARY:Practice: Statistics II
+LOCATION:
+DESCRIPTION:Time series: stationarity\, ACF/PACF to ARMA(p\,q)\, ARIMA/SARIMA
+END:VEVENT
+BEGIN:VEVENT
+UID:s56-20261125@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261125T163000
+DTEND;TZID=Europe/Helsinki:20261125T183000
+SUMMARY:Mock exam: Integral Calculus
+LOCATION:
+DESCRIPTION:full past exam\, timed\, closed book\, then mark it
+END:VEVENT
+BEGIN:VEVENT
+UID:s57-20261125@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261125T183000
+DTEND;TZID=Europe/Helsinki:20261125T203000
+SUMMARY:Mock exam: Statistics II
+LOCATION:
+DESCRIPTION:full past exam\, timed\, closed book\, then mark it
+END:VEVENT
+BEGIN:VEVENT
+UID:s58-20261126@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261126T090000
+DTEND;TZID=Europe/Helsinki:20261126T110000
+SUMMARY:Mock exam: Matrix Algebra
+LOCATION:
+DESCRIPTION:full past exam\, timed\, closed book\, then mark it
+END:VEVENT
+BEGIN:VEVENT
+UID:s59-20261126@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261126T113000
+DTEND;TZID=Europe/Helsinki:20261126T133000
+SUMMARY:Practice: Integral Calculus
+LOCATION:
+DESCRIPTION:Physical applications: centre of mass\, work\, related rates + Double integrals over polygonal regions
+END:VEVENT
+BEGIN:VEVENT
+UID:s60-20261127@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261127T163000
+DTEND;TZID=Europe/Helsinki:20261127T183000
+SUMMARY:Mock exam: Integral Calculus
+LOCATION:
+DESCRIPTION:full past exam\, timed\, closed book\, then mark it
+END:VEVENT
+BEGIN:VEVENT
+UID:s61-20261127@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261127T183000
+DTEND;TZID=Europe/Helsinki:20261127T203000
+SUMMARY:Mock exam: Statistics II
+LOCATION:
+DESCRIPTION:full past exam\, timed\, closed book\, then mark it
+END:VEVENT
+BEGIN:VEVENT
+UID:s62-20261128@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261128T090000
+DTEND;TZID=Europe/Helsinki:20261128T110000
+SUMMARY:Review: Matrix Algebra
+LOCATION:
+DESCRIPTION:formula sheet\, mistakes log\, one timed problem per topic
+END:VEVENT
+BEGIN:VEVENT
+UID:s63-20261128@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261128T113000
+DTEND;TZID=Europe/Helsinki:20261128T133000
+SUMMARY:Review: Matrix Algebra
+LOCATION:
+DESCRIPTION:formula sheet\, mistakes log\, one timed problem per topic
+END:VEVENT
+BEGIN:VEVENT
+UID:s64-20261129@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261129T090000
+DTEND;TZID=Europe/Helsinki:20261129T110000
+SUMMARY:Review: Integral Calculus
+LOCATION:
+DESCRIPTION:formula sheet\, mistakes log\, one timed problem per topic
+END:VEVENT
+BEGIN:VEVENT
+UID:s65-20261129@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261129T113000
+DTEND;TZID=Europe/Helsinki:20261129T133000
+SUMMARY:Review: Statistics II
+LOCATION:
+DESCRIPTION:formula sheet\, mistakes log\, one timed problem per topic
+END:VEVENT
+BEGIN:VEVENT
+UID:e0-20261130@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261130T163000
+DTEND;TZID=Europe/Helsinki:20261130T193000
+SUMMARY:EXAM: Integral Calculus
+LOCATION:LUT Lappeenranta
+END:VEVENT
+BEGIN:VEVENT
+UID:e1-20261130@exam-schedule-system
+DTSTAMP:20261022T091446Z
+DTSTART;TZID=Europe/Helsinki:20261130T163000
+DTEND;TZID=Europe/Helsinki:20261130T193000
+SUMMARY:EXAM: Statistics II
+LOCATION:LUT Lappeenranta
+END:VEVENT
+END:VCALENDAR

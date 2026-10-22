@@ -1,0 +1,84 @@
+{
+  "student": {
+    "home_city": "Lappeenranta",
+    "start_date": "2026-10-23",
+    "daily_hours": 4,
+    "block_hours": 2,
+    "day_start": "09:00",
+    "rest_weekdays": ["sun"],
+    "blocked_dates": [],
+    "fill_free_time": true
+  },
+  "exams": [
+    {
+      "name": "Integral Calculus",
+      "credits": 3,
+      "category": "math_computational",
+      "date": "2026-11-30",
+      "start": "16:30",
+      "duration_h": 3,
+      "university": "LUT",
+      "city": "Lappeenranta",
+      "difficulty": 3,
+      "prior_knowledge": 0.3,
+      "target": "good",
+      "documents": ["../documents/integral"],
+      "mocks": 3,
+      "topics": [
+        {"name": "Techniques refresher: parts, substitution, trig identities", "weight": 2},
+        {"name": "Definite integrals: absolute value, piecewise, substitution limits", "weight": 4},
+        {"name": "Solids of revolution: disk/washer/shell, surface area, mass", "weight": 8},
+        {"name": "Parametric curves: area, arc length, surface of revolution", "weight": 3},
+        {"name": "Polar curves: shapes, area, arc length, inner loops", "weight": 5},
+        {"name": "Probability densities: normalise, E[X], CDF, median", "weight": 5},
+        {"name": "Physical applications: centre of mass, work, related rates", "weight": 4},
+        {"name": "Double integrals over polygonal regions", "weight": 3}
+      ]
+    },
+    {
+      "name": "Statistics II",
+      "credits": 4,
+      "category": "statistics",
+      "date": "2026-11-30",
+      "start": "16:30",
+      "duration_h": 3,
+      "university": "LUT",
+      "city": "Lappeenranta",
+      "difficulty": 3,
+      "prior_knowledge": 0.2,
+      "target": "good",
+      "documents": ["../documents/stats2"],
+      "mocks": 2,
+      "topics": [
+        {"name": "Priors: Bayes' theorem, conjugate pairs, Jeffreys, hierarchical", "weight": 10},
+        {"name": "Likelihood: log-likelihood, score equation, MLE, Fisher information", "weight": 10},
+        {"name": "MC & MCMC: Gaussian-Gaussian update, Metropolis-Hastings, acceptance rate", "weight": 10},
+        {"name": "Model selection: AIC, BIC, Bayes factors, Jeffreys scale, BMA weights", "weight": 10},
+        {"name": "Time series: stationarity, ACF/PACF to ARMA(p,q), ARIMA/SARIMA", "weight": 10}
+      ]
+    },
+    {
+      "name": "Matrix Algebra",
+      "credits": 3,
+      "category": "math_proof",
+      "date": "2026-12-01",
+      "start": null,
+      "duration_h": 3,
+      "university": "LUT",
+      "city": "Lappeenranta",
+      "difficulty": 3,
+      "prior_knowledge": 0.4,
+      "target": "top",
+      "documents": ["../documents/matrix/*.pdf"],
+      "mocks": 2,
+      "topics": [
+        {"name": "Proof rules, subspaces, sums, unions, counterexamples", "weight": 5},
+        {"name": "Independence, basis, dimension, coordinates, change of basis", "weight": 5},
+        {"name": "Systems, inverse, determinants, Cramer, dual vectors", "weight": 3},
+        {"name": "Linear maps: kernel, range, rank-nullity, injective/surjective", "weight": 4},
+        {"name": "Eigenvalues, eigenbasis, T^k by induction, diagonalisation", "weight": 4},
+        {"name": "Inner products, Cauchy-Schwarz, projection, Gram-Schmidt, least squares", "weight": 5}
+      ]
+    }
+  ]
+}
