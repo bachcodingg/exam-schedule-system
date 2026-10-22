@@ -35,6 +35,14 @@ def cmd_plan(args: argparse.Namespace) -> int:
         found = [p for p in paths if p.exists()]
         if found:
             docs = estimate_documents(found, category=exam.category)
+            if docs.skipped:
+                doc_notes.append(f"{exam.name}: skipped unsupported files: {', '.join(docs.skipped)}")
+            guessed = max(docs.scores, key=lambda c: docs.scores[c])
+            if docs.scores[guessed] and guessed != exam.category:
+                doc_notes.append(
+                    f"{exam.name}: the documents read like '{guessed}', the input says "
+                    f"'{exam.category}'. Check the category."
+                )
         estimates.append(estimator.estimate(exam, docs))
 
     needed = {e.exam: e.hours for e in estimates}
@@ -58,9 +66,10 @@ def cmd_docs(args: argparse.Namespace) -> int:
     result = estimate_documents(args.files, category=args.category)
     print(f"Category: {result.category}  (keyword scores: {result.scores})")
     for d in result.docs:
-        kind = "past exam" if d.is_past_exam else "material"
         print(f"  {Path(d.path).name}: {d.pages} pages, {d.exercises} exercises, "
-              f"{d.formula_marks} formula marks ({kind})")
+              f"{d.formula_marks} formula marks ({d.kind})")
+    if result.skipped:
+        print(f"  skipped (unsupported type): {', '.join(result.skipped)}")
     print(f"Estimated study time from these documents: {result.hours:.1f} h")
     return 0
 

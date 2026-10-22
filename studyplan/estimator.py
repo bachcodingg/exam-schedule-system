@@ -53,5 +53,7 @@ def estimate(exam: Exam, docs: DocEstimate | None = None) -> Estimate:
     # The documents measure the material itself, so difficulty is already reflected in them.
     from_docs = docs.hours * knowledge * target
     blended = (1 - DOCUMENT_WEIGHT) * from_credits + DOCUMENT_WEIGHT * from_docs
-    detail += f"; documents ({docs.category}) suggest {from_docs:.1f} h -> blended {blended:.1f} h"
+    detail += (
+        f"; documents ({docs.summary()}) suggest {from_docs:.1f} h -> blended {blended:.1f} h"
+    )
     return Estimate(exam.name, round(blended, 1), "credits+documents", detail)
