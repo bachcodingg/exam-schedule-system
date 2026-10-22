@@ -6,6 +6,7 @@ Supported formats: .pdf (needs `pypdf`), .pptx (needs `python-pptx`), .docx (nee
 
 from __future__ import annotations
 
+import logging
 import re
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -117,6 +118,7 @@ def extract_pages(path: str | Path) -> list[str]:
     if suffix == ".pdf":
         from pypdf import PdfReader
 
+        logging.getLogger("pypdf").setLevel(logging.ERROR)  # harmless "wrong pointing object" noise
         return [page.extract_text() or "" for page in PdfReader(path).pages]
     if suffix == ".pptx":
         from pptx import Presentation
