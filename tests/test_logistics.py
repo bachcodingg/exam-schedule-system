@@ -30,3 +30,11 @@ def test_shared_slot_suggests_time_split():
 def test_unconfirmed_date_is_mentioned():
     a = Exam("Nets", 3, Location("LUT", "Lahti"), assumed_date=DAY)
     assert any("not confirmed" in n for n in check(HOME, [a]))
+
+
+def test_city_names_match_regardless_of_case():
+    a = Exam("A", 3, Location("LUT", "lahti"), date=DAY, start=time(9, 0), duration_h=3)
+    b = Exam("B", 3, Location("LUT", "LAPPEENRANTA "), date=DAY, start=time(13, 0))
+    notes = check(HOME, [a, b])
+    assert any(n.startswith("CONFLICT") for n in notes)
+    assert not any("travel time unknown" in n for n in notes)
