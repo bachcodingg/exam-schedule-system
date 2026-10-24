@@ -17,10 +17,15 @@ SAFETY_MARGIN_H = 1.0
 EARLY_EXAM_HOUR = 10
 
 
+_TRAVEL_LOWER = {frozenset(c.lower() for c in pair): h for pair, h in TRAVEL_HOURS.items()}
+
+
 def travel_hours(a: str, b: str) -> float | None:
-    if a.lower() == b.lower():
+    """Hours between two cities, ignoring case and surrounding spaces; None if unknown."""
+    a, b = a.strip().lower(), b.strip().lower()
+    if a == b:
         return 0.0
-    return TRAVEL_HOURS.get(frozenset({a, b}))
+    return _TRAVEL_LOWER.get(frozenset({a, b}))
 
 
 def check(profile: Profile, exams: list[Exam]) -> list[str]:
@@ -76,7 +81,7 @@ def check(profile: Profile, exams: list[Exam]) -> list[str]:
             )
 
     for exam in exams:
-        away = exam.location.city.lower() != profile.home_city.lower()
+        away = travel_hours(exam.location.city, profile.home_city) != 0.0
         if away and exam.start and exam.start.hour < EARLY_EXAM_HOUR:
             travel = travel_hours(profile.home_city, exam.location.city)
             eta = f"~{travel:g} h" if travel else "unknown time"
