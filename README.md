@@ -1,5 +1,7 @@
 # Exam Schedule System
 
+[![tests](https://github.com/bachcodingg/exam-schedule-system/actions/workflows/tests.yml/badge.svg)](https://github.com/bachcodingg/exam-schedule-system/actions/workflows/tests.yml)
+
 An exam-aware study planner. You describe your exams (name, credits, date, time, university and
 city, category) and, optionally, the course documents. The planner then:
 
@@ -51,11 +53,17 @@ Override the input file from the command line:
 python -m studyplan plan data/exams_lut_2026.json --start 2026-10-25 --hours 3
 ```
 
-Estimate the workload of a course from its documents:
+Estimate the workload of a course from its documents (files, folders or quoted glob patterns,
+so it works the same in PowerShell and bash):
 
 ```bash
-python -m studyplan docs documents/stats2/*
+python -m studyplan docs documents/stats2
+python -m studyplan docs "documents/calc/*.pdf"
 ```
+
+Invalid input is reported as `error: ...` with exit code 2, naming the exam and the field,
+e.g. `error: Statistics II: difficulty must be 1..5, got 7`. Corrupt or encrypted documents
+are skipped and listed under the warnings instead of stopping the plan.
 
 ## Input file
 
@@ -67,7 +75,8 @@ python -m studyplan docs documents/stats2/*
     "daily_hours": 4,
     "block_hours": 2,
     "rest_weekdays": ["sun"],
-    "blocked_dates": ["2026-11-14"]
+    "blocked_dates": ["2026-11-14"],
+    "timezone": "Europe/Helsinki"
   },
   "exams": [
     {
@@ -103,6 +112,7 @@ python -m studyplan docs documents/stats2/*
 | `mocks` | number of timed mock exams, default 1. One per past exam you have is a good choice |
 | `assumed_date` | used while `date` is `null` (not announced yet) |
 | `hours` | skip the estimate and use this number |
+| `timezone` (student) | IANA name for the `.ics` times, default `Europe/Helsinki` |
 
 ## How the workload is estimated
 
@@ -152,6 +162,17 @@ tests/                      pytest suite
 ```bash
 python -m pytest
 ```
+
+## Known limitations
+
+- The constants (hours per credit, minutes per page, ...) are hand-tuned on a few LUT courses,
+  not calibrated on data. Treat the estimate as a starting point and use `hours` to override it.
+- `TRAVEL_HOURS` in `studyplan/logistics.py` only knows Lappeenranta, Lahti and Helsinki; other
+  city pairs are reported as "travel time unknown" until you add them.
+- The plan is static: it does not know which sessions you actually did. Re-run it with a new
+  `--start` date after falling behind.
+- The `.ics` file names its time zone (`TZID`) without a `VTIMEZONE` block. Google, Outlook
+  and Apple Calendar resolve IANA names themselves; strict validators may complain.
 
 ## Roadmap
 
