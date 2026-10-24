@@ -1,7 +1,8 @@
 """Read course documents (slides, exercise sheets, past exams) and estimate the workload.
 
 Supported formats: .pdf (needs `pypdf`), .pptx (needs `python-pptx`), .docx (needs
-`python-docx`), .txt and .md. Other files (images, archives) are skipped with a note.
+`python-docx`), .txt and .md. Other files (images, archives) are skipped with a note,
+and so are files that cannot be read (corrupt, encrypted, or the library is missing).
 """
 
 from __future__ import annotations
@@ -90,6 +91,7 @@ class DocEstimate:
     scores: dict[str, int]
     docs: list[DocStats] = field(default_factory=list)
     skipped: list[str] = field(default_factory=list)
+    unreadable: list[str] = field(default_factory=list)  # "name (reason)"
 
     @property
     def has_material(self) -> bool:
@@ -128,7 +130,7 @@ def extract_pages(path: str | Path) -> list[str]:
             for slide in Presentation(path).slides
         ]
     if suffix in (".txt", ".md"):
-        return _paginate(path.read_text(encoding="utf-8"))
+        return _paginate(path.read_text(encoding="utf-8", errors="replace"))
     if suffix == ".docx":
         from docx import Document
 
@@ -184,7 +186,14 @@ def estimate_documents(paths: list[str | Path], category: str | None = None) -> 
     """Estimate study hours from the material. `category` overrides the automatic guess."""
     readable = [p for p in paths if Path(p).suffix.lower() in SUPPORTED]
     skipped = [Path(p).name for p in paths if Path(p).suffix.lower() not in SUPPORTED]
-    analysed = [analyse(p) for p in readable]
+    analysed, unreadable = [], []
+    for p in readable:
+        try:
+            analysed.append(analyse(p))
+        except ImportError as err:
+            unreadable.append(f"{Path(p).name} (install {err.name or 'the reader library'})")
+        except Exception as err:  # corrupt or encrypted files should not stop the whole plan
+            unreadable.append(f"{Path(p).name} ({type(err).__name__})")
     all_text = "\n".join(text for _, text in analysed)
     guessed, scores = classify(all_text)
     cat = category or guessed
@@ -206,4 +215,4 @@ def estimate_documents(paths: list[str | Path], category: str | None = None) -> 
         minutes += page_minutes + exercise_minutes
     hours = minutes / 60 + min(past_exams, MAX_PAST_EXAMS) * PAST_EXAM_HOURS
 
-    return DocEstimate(cat, round(hours, 1), scores, [s for s, _ in analysed], skipped)
+    return DocEstimate(cat, round(hours, 1), scores, [s for s, _ in analysed], skipped, unreadable)
