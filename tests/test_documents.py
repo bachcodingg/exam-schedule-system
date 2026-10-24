@@ -80,3 +80,14 @@ def test_function_and_model_do_not_make_math_look_like_programming():
     text = "Show that the linear mapping is injective. Prove the kernel is a subspace. Let f be a function."
     assert classify(text)[0] == "math_proof"
     assert classify("posterior and prior of the model, likelihood")[0] == "statistics"
+
+
+def test_corrupt_file_is_reported_not_fatal(tmp_path):
+    good = tmp_path / "week1.txt"
+    good.write_text("Exercise 1 compute the integral\n", encoding="utf-8")
+    bad = tmp_path / "broken.pdf"
+    bad.write_bytes(b"not a pdf at all")
+
+    result = estimate_documents([good, bad])
+    assert [d.path for d in result.docs] == [str(good)]
+    assert len(result.unreadable) == 1 and result.unreadable[0].startswith("broken.pdf (")
