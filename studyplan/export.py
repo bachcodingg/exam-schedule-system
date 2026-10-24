@@ -83,39 +83,59 @@ def _ics_time(moment: datetime) -> str:
 
 
 def _event(
-    uid: str, start: datetime, end: datetime, summary: str, location: str = "", description: str = ""
+    uid: str, start: datetime, end: datetime, summary: str, tz: str, stamp: str,
+    location: str = "", description: str = "",
 ) -> list[str]:
     extra = [f"DESCRIPTION:{_ics_escape(description)}"] if description else []
     return [
         "BEGIN:VEVENT",
         f"UID:{uid}@exam-schedule-system",
-        f"DTSTAMP:{datetime.now(timezone.utc):%Y%m%dT%H%M%SZ}",
-        f"DTSTART;TZID=Europe/Helsinki:{_ics_time(start)}",
-        f"DTEND;TZID=Europe/Helsinki:{_ics_time(end)}",
-        f"SUMMARY:{summary}",
-        f"LOCATION:{location}",
+        f"DTSTAMP:{stamp}",
+        f"DTSTART;TZID={tz}:{_ics_time(start)}",
+        f"DTEND;TZID={tz}:{_ics_time(end)}",
+        f"SUMMARY:{_ics_escape(summary)}",
+        f"LOCATION:{_ics_escape(location)}",
         *extra,
         "END:VEVENT",
     ]
 
 
 def _ics_escape(text: str) -> str:
-    return text.replace("\\", "\\\\").replace(";", "\\;").replace(",", "\\,")
+    return (
+        text.replace("\\", "\\\\").replace(";", "\\;").replace(",", "\\,")
+        .replace("\r\n", "\\n").replace("\n", "\\n")
+    )
 
 
-def to_ics(plan: Plan, exams: list[Exam]) -> str:
+def _fold(line: str) -> list[str]:
+    """RFC 5545: lines longer than 75 octets continue on the next line after a space."""
+    parts, current = [], ""
+    for ch in line:
+        limit = 75 if not parts else 74  # continuation lines start with a space
+        if len((current + ch).encode("utf-8")) > limit:
+            parts.append(current)
+            current = ""
+        current += ch
+    parts.append(current)
+    return [parts[0]] + [" " + p for p in parts[1:]]
+
+
+def to_ics(plan: Plan, exams: list[Exam], timezone_name: str = "Europe/Helsinki") -> str:
+    stamp = f"{datetime.now(timezone.utc):%Y%m%dT%H%M%SZ}"
     lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//exam-schedule-system//EN", "CALSCALE:GREGORIAN"]
     for i, s in enumerate(plan.sessions):
         start = datetime.combine(s.day, s.start)
         end = start + timedelta(hours=s.hours)
         lines += _event(
-            f"s{i}-{s.day:%Y%m%d}", start, end, f"{KIND_LABEL[s.kind]}: {s.exam}", description=s.topic or ""
+            f"s{i}-{s.day:%Y%m%d}", start, end, f"{KIND_LABEL[s.kind]}: {s.exam}",
+            timezone_name, stamp, description=s.topic or "",
         )
     for i, exam in enumerate(exams):
         if exam.starts_at():
+            title = "EXAM" if exam.date_confirmed else "EXAM (date not confirmed)"
             lines += _event(
                 f"e{i}-{exam.exam_date:%Y%m%d}", exam.starts_at(), exam.ends_at(),
-                f"EXAM: {exam.name}", str(exam.location),
+                f"{title}: {exam.name}", timezone_name, stamp, str(exam.location),
             )
     lines.append("END:VCALENDAR")
-    return "\r\n".join(lines) + "\r\n"
+    return "\r\n".join(folded for line in lines for folded in _fold(line)) + "\r\n"
