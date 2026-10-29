@@ -57,6 +57,7 @@ class Exam:
     hours: float | None = None  # manual override of the estimate
     topics: list[Topic] = field(default_factory=list)  # study order, weighted by exam points
     mocks: int = 1  # timed mock exams, e.g. one per past exam you have
+    pack: str | None = None  # content pack (.md) with overviews, examples and a practice exam
 
     def __post_init__(self) -> None:
         problems = []
@@ -223,6 +224,7 @@ def _from_dict(raw: dict) -> tuple[Profile, list[Exam]]:
             hours=e.get("hours"),
             topics=[_parse_topic(t) for t in e.get("topics", [])],
             mocks=e.get("mocks", 1),
+            pack=e.get("pack"),
         )
         for e in raw["exams"]
     ]
