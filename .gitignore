@@ -10,6 +10,7 @@ dist/
 # Generated plans
 plan.md
 *.ics
+guides/
 
 # Your own course material (keep it out of the repo)
 documents/

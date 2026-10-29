@@ -6,6 +6,16 @@
 | Statistics II | 4 | Mon 30.11 16:30 | LUT Lappeenranta | 19 | 34 |
 | Matrix Algebra | 3 | Tue 01.12 | LUT Lappeenranta | 38 | 60 |
 
+## Workload
+
+| Exam | Estimated h | Alone at 4 h/day | Study days before it | Planned h | Days with sessions |
+|---|---|---|---|---|---|
+| Integral Calculus | 20.9 | 6 days | 32 | 38 | 19 |
+| Statistics II | 18.8 | 5 days | 32 | 34 | 17 |
+| Matrix Algebra | 38 | 10 days | 32 | 60 | 29 |
+
+All exams together: 77.7 h estimated, 132 h of study time in the calendar. Latest start that still fits every estimate: Sat 07.11 (15 days of slack). The extra time becomes spaced practice.
+
 ## Warnings and logistics
 
 - Matrix Algebra: start time unknown, so its mock runs in a normal study block. Add 'start' when it is announced and re-run.

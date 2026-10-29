@@ -5,14 +5,18 @@ from __future__ import annotations
 from collections import defaultdict
 from datetime import date, datetime, timedelta, timezone
 
+from . import method, workload
 from .estimator import Estimate
-from .models import Exam, Plan
+from .models import Exam, Plan, Topic
 
 KIND_LABEL = {"learn": "Learn", "review": "Review", "mock": "Mock exam", "practice": "Practice"}
 DAY_LABEL = {"buffer": "Buffer / rest", "blocked": "Blocked", "exam": "EXAM"}
 
 
-def to_markdown(plan: Plan, exams: list[Exam], estimates: list[Estimate], notes: list[str]) -> str:
+def to_markdown(
+    plan: Plan, exams: list[Exam], estimates: list[Estimate], notes: list[str],
+    work: workload.Workload | None = None,
+) -> str:
     lines = ["# Study plan", ""]
     lines += ["| Exam | Credits | Date | Place | Estimated h | Planned h |", "|---|---|---|---|---|---|"]
     for exam in sorted(exams, key=lambda e: e.exam_date):
@@ -23,6 +27,9 @@ def to_markdown(plan: Plan, exams: list[Exam], estimates: list[Estimate], notes:
             f"| {exam.name} | {exam.credits:g} | {when} | {exam.location} | "
             f"{plan.needed[exam.name]:.0f} | {plan.scheduled[exam.name]:.0f} |"
         )
+
+    if work:
+        lines += ["", "## Workload", ""] + workload.to_markdown(work)
 
     if plan.warnings or notes:
         lines += ["", "## Warnings and logistics", ""]
@@ -35,10 +42,8 @@ def to_markdown(plan: Plan, exams: list[Exam], estimates: list[Estimate], notes:
         if not exam.topics:
             continue
         lines += ["", f"## Topics: {exam.name}", "", "| Topic | Weight | Planned h | Dates |", "|---|---|---|---|"]
-        for topic in exam.topics:
-            hits = [s for s in plan.sessions if s.exam == exam.name and s.topic and topic.name in s.topic.split(" + ")]
-            when = f"{min(s.day for s in hits):%d.%m}-{max(s.day for s in hits):%d.%m}" if hits else "-"
-            hours = sum(s.hours / len(s.topic.split(" + ")) for s in hits)
+        for topic, hours, first, last in topic_hours(plan, exam):
+            when = f"{first:%d.%m}-{last:%d.%m}" if first else "-"
             lines.append(f"| {topic.name} | {topic.weight:g} | {hours:.1f} | {when} |")
 
     lines += ["", "## Weekly overview (hours)", ""]
@@ -68,6 +73,20 @@ def to_markdown(plan: Plan, exams: list[Exam], estimates: list[Estimate], notes:
             )
             lines.append(f"- {day:%a %d.%m} - {blocks}")
     return "\n".join(lines) + "\n"
+
+
+def topic_hours(plan: Plan, exam: Exam) -> list[tuple[Topic, float, date | None, date | None]]:
+    """(topic, planned hours, first day, last day) for every topic of the exam.
+
+    A session shared by several topics counts equally for each of them.
+    """
+    out = []
+    for topic in exam.topics:
+        hits = [s for s in plan.sessions if s.exam == exam.name and s.topic and topic.name in s.topic.split(" + ")]
+        hours = sum(s.hours / len(s.topic.split(" + ")) for s in hits)
+        days = [s.day for s in hits]
+        out.append((topic, hours, min(days, default=None), max(days, default=None)))
+    return out
 
 
 def weekly_hours(plan: Plan) -> dict[date, dict[str, float]]:
@@ -123,12 +142,13 @@ def _fold(line: str) -> list[str]:
 def to_ics(plan: Plan, exams: list[Exam], timezone_name: str = "Europe/Helsinki") -> str:
     stamp = f"{datetime.now(timezone.utc):%Y%m%dT%H%M%SZ}"
     lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//exam-schedule-system//EN", "CALSCALE:GREGORIAN"]
-    for i, s in enumerate(plan.sessions):
+    category = {e.name: e.category for e in exams}
+    for i, (s, steps) in enumerate(zip(plan.sessions, method.plan_agendas(plan, exams))):
         start = datetime.combine(s.day, s.start)
         end = start + timedelta(hours=s.hours)
         lines += _event(
             f"s{i}-{s.day:%Y%m%d}", start, end, f"{KIND_LABEL[s.kind]}: {s.exam}",
-            timezone_name, stamp, description=s.topic or "",
+            timezone_name, stamp, description=method.describe(s, steps, category.get(s.exam, "conceptual")),
         )
     for i, exam in enumerate(exams):
         if exam.starts_at():

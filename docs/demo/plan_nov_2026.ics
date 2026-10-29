@@ -4,601 +4,1228 @@ PRODID:-//exam-schedule-system//EN
 CALSCALE:GREGORIAN
 BEGIN:VEVENT
 UID:s0-20261023@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261023T090000
 DTEND;TZID=Europe/Helsinki:20261023T110000
 SUMMARY:Learn: Matrix Algebra
 LOCATION:
-DESCRIPTION:Proof rules\, subspaces\, sums\, unions\, counterexamples
+DESCRIPTION:Proof rules\, subspaces\, sums\, unions\, counterexamples\n09:0
+ 0 Map the course (15 min): Skim the topic list and every overview\, glance
+  at one past exam to see the question types (do not solve it)\, and rate e
+ ach topic 1-3. Your ratings steer the extra time.\n09:15 Pre-test (10 min)
+ : Attempt one problem on this topic cold\, before reading anything. Gettin
+ g it wrong is fine: trying first makes the explanation stick.\n09:25 Conce
+ pt overview (15 min): Read the overview\, then write the key definitions w
+ ord for word from memory. Proofs fail on fuzzy definitions.\n09:40 Worked 
+ examples (25 min): For each proof write its skeleton (assumption\, goal\, 
+ key step) and why the key step works. Then close it and rebuild the proof 
+ from the skeleton.\n10:05 Practice (45 min): Prove the statements yourself
+  in full sentences. Stuck: unfold the definitions\, try a small case\, or 
+ look for a counterexample.\n10:50 Blank-page recall (10 min): From memory:
+  definitions\, theorem statements with all their conditions\, and one coun
+ terexample for each condition.
 END:VEVENT
 BEGIN:VEVENT
 UID:s1-20261023@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261023T113000
 DTEND;TZID=Europe/Helsinki:20261023T133000
 SUMMARY:Learn: Integral Calculus
 LOCATION:
-DESCRIPTION:Techniques refresher: parts\, substitution\, trig identities + Definite integrals: absolute value\, piecewise\, substitution limits
+DESCRIPTION:Techniques refresher: parts\, substitution\, trig identities + 
+ Definite integrals: absolute value\, piecewise\, substitution limits\n11:3
+ 0 Map the course (15 min): Skim the topic list and every overview\, glance
+  at one past exam to see the question types (do not solve it)\, and rate e
+ ach topic 1-3. Your ratings steer the extra time.\n11:45 Pre-test (10 min)
+ : Attempt one problem on this topic cold\, before reading anything. Gettin
+ g it wrong is fine: trying first makes the explanation stick.\n11:55 Conce
+ pt overview (15 min): Read the beginner overview once\, then close it and 
+ write from memory: what problem this topic solves\, the key formula or ide
+ a\, and when to use it.\n12:10 Worked examples (25 min): Study the worked 
+ examples line by line and say why each step is allowed. Then cover the sol
+ ution and redo the example yourself.\n12:35 Practice (45 min): Solve from 
+ easy to exam level\, writing every step. Check each answer: differentiate 
+ the antiderivative\, sanity-check sign and size. After 10 minutes stuck\, 
+ uncover only the next line.\n13:20 Blank-page recall (10 min): Blank page:
+  write today's formulas and traps from memory\, check\, and copy what you 
+ missed to the formula sheet draft and the mistakes log.
 END:VEVENT
 BEGIN:VEVENT
 UID:s2-20261024@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261024T090000
 DTEND;TZID=Europe/Helsinki:20261024T110000
 SUMMARY:Learn: Matrix Algebra
 LOCATION:
-DESCRIPTION:Proof rules\, subspaces\, sums\, unions\, counterexamples
+DESCRIPTION:Proof rules\, subspaces\, sums\, unions\, counterexamples\n09:0
+ 0 Warm-up recall (10 min): Without notes\, redo two problems from earlier 
+ topics or from the mistakes log.\n09:10 Worked examples (20 min): For each
+  proof write its skeleton (assumption\, goal\, key step) and why the key s
+ tep works. Then close it and rebuild the proof from the skeleton.\n09:30 P
+ ractice (70 min): Prove the statements yourself in full sentences. Stuck: 
+ unfold the definitions\, try a small case\, or look for a counterexample.\
+ n10:40 Blank-page recall (20 min): From memory: definitions\, theorem stat
+ ements with all their conditions\, and one counterexample for each conditi
+ on.
 END:VEVENT
 BEGIN:VEVENT
 UID:s3-20261024@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261024T113000
 DTEND;TZID=Europe/Helsinki:20261024T133000
 SUMMARY:Learn: Integral Calculus
 LOCATION:
-DESCRIPTION:Definite integrals: absolute value\, piecewise\, substitution limits
+DESCRIPTION:Definite integrals: absolute value\, piecewise\, substitution l
+ imits\n11:30 Warm-up recall (10 min): Without notes\, redo two problems fr
+ om earlier topics or from the mistakes log.\n11:40 Worked examples (20 min
+ ): Study the worked examples line by line and say why each step is allowed
+ . Then cover the solution and redo the example yourself.\n12:00 Practice (
+ 70 min): Solve from easy to exam level\, writing every step. Check each an
+ swer: differentiate the antiderivative\, sanity-check sign and size. After
+  10 minutes stuck\, uncover only the next line.\n13:10 Blank-page recall (
+ 20 min): Blank page: write today's formulas and traps from memory\, check\
+ , and copy what you missed to the formula sheet draft and the mistakes log
+ .
 END:VEVENT
 BEGIN:VEVENT
 UID:s4-20261026@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261026T090000
 DTEND;TZID=Europe/Helsinki:20261026T110000
 SUMMARY:Learn: Matrix Algebra
 LOCATION:
-DESCRIPTION:Proof rules\, subspaces\, sums\, unions\, counterexamples
+DESCRIPTION:Proof rules\, subspaces\, sums\, unions\, counterexamples\n09:0
+ 0 Warm-up recall (10 min): Without notes\, redo two problems from earlier 
+ topics or from the mistakes log.\n09:10 Worked examples (20 min): For each
+  proof write its skeleton (assumption\, goal\, key step) and why the key s
+ tep works. Then close it and rebuild the proof from the skeleton.\n09:30 P
+ ractice (70 min): Prove the statements yourself in full sentences. Stuck: 
+ unfold the definitions\, try a small case\, or look for a counterexample.\
+ n10:40 Blank-page recall (20 min): From memory: definitions\, theorem stat
+ ements with all their conditions\, and one counterexample for each conditi
+ on.
 END:VEVENT
 BEGIN:VEVENT
 UID:s5-20261026@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261026T113000
 DTEND;TZID=Europe/Helsinki:20261026T133000
 SUMMARY:Learn: Statistics II
 LOCATION:
-DESCRIPTION:Priors: Bayes' theorem\, conjugate pairs\, Jeffreys\, hierarchical
+DESCRIPTION:Priors: Bayes' theorem\, conjugate pairs\, Jeffreys\, hierarchi
+ cal\n11:30 Map the course (15 min): Skim the topic list and every overview
+ \, glance at one past exam to see the question types (do not solve it)\, a
+ nd rate each topic 1-3. Your ratings steer the extra time.\n11:45 Pre-test
+  (10 min): Attempt one problem on this topic cold\, before reading anythin
+ g. Getting it wrong is fine: trying first makes the explanation stick.\n11
+ :55 Concept overview (15 min): Read the beginner overview once\, then clos
+ e it and write from memory: what problem this topic solves\, the key formu
+ la or idea\, and when to use it.\n12:10 Worked examples (25 min): For each
+  worked example name the model\, the formula and what the result means in 
+ one sentence. Then cover it and redo it.\n12:35 Practice (45 min): Solve b
+ y hand: write the model\, derive\, compute\, and end with a one-sentence i
+ nterpretation. After 10 minutes stuck\, uncover one line.\n13:20 Blank-pag
+ e recall (10 min): Blank page: write today's formulas and traps from memor
+ y\, check\, and copy what you missed to the formula sheet draft and the mi
+ stakes log.
 END:VEVENT
 BEGIN:VEVENT
 UID:s6-20261027@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261027T090000
 DTEND;TZID=Europe/Helsinki:20261027T110000
 SUMMARY:Learn: Matrix Algebra
 LOCATION:
-DESCRIPTION:Proof rules\, subspaces\, sums\, unions\, counterexamples + Independence\, basis\, dimension\, coordinates\, change of basis
+DESCRIPTION:Proof rules\, subspaces\, sums\, unions\, counterexamples + Ind
+ ependence\, basis\, dimension\, coordinates\, change of basis\n09:00 Warm-
+ up recall (5 min): Without notes\, redo two problems from earlier topics o
+ r from the mistakes log.\n09:05 Pre-test (10 min): Attempt one problem on 
+ this topic cold\, before reading anything. Getting it wrong is fine: tryin
+ g first makes the explanation stick.\n09:15 Concept overview (20 min): Rea
+ d the overview\, then write the key definitions word for word from memory.
+  Proofs fail on fuzzy definitions.\n09:35 Worked examples (30 min): For ea
+ ch proof write its skeleton (assumption\, goal\, key step) and why the key
+  step works. Then close it and rebuild the proof from the skeleton.\n10:05
+  Practice (45 min): Prove the statements yourself in full sentences. Stuck
+ : unfold the definitions\, try a small case\, or look for a counterexample
+ .\n10:50 Blank-page recall (10 min): From memory: definitions\, theorem st
+ atements with all their conditions\, and one counterexample for each condi
+ tion.
 END:VEVENT
 BEGIN:VEVENT
 UID:s7-20261027@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261027T113000
 DTEND;TZID=Europe/Helsinki:20261027T133000
 SUMMARY:Learn: Integral Calculus
 LOCATION:
-DESCRIPTION:Solids of revolution: disk/washer/shell\, surface area\, mass
+DESCRIPTION:Solids of revolution: disk/washer/shell\, surface area\, mass\n
+ 11:30 Warm-up recall (5 min): Without notes\, redo two problems from earli
+ er topics or from the mistakes log.\n11:35 Pre-test (10 min): Attempt one 
+ problem on this topic cold\, before reading anything. Getting it wrong is 
+ fine: trying first makes the explanation stick.\n11:45 Concept overview (2
+ 0 min): Read the beginner overview once\, then close it and write from mem
+ ory: what problem this topic solves\, the key formula or idea\, and when t
+ o use it.\n12:05 Worked examples (30 min): Study the worked examples line 
+ by line and say why each step is allowed. Then cover the solution and redo
+  the example yourself.\n12:35 Practice (45 min): Solve from easy to exam l
+ evel\, writing every step. Check each answer: differentiate the antideriva
+ tive\, sanity-check sign and size. After 10 minutes stuck\, uncover only t
+ he next line.\n13:20 Blank-page recall (10 min): Blank page: write today's
+  formulas and traps from memory\, check\, and copy what you missed to the 
+ formula sheet draft and the mistakes log.
 END:VEVENT
 BEGIN:VEVENT
 UID:s8-20261028@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261028T090000
 DTEND;TZID=Europe/Helsinki:20261028T110000
 SUMMARY:Learn: Matrix Algebra
 LOCATION:
-DESCRIPTION:Independence\, basis\, dimension\, coordinates\, change of basis
+DESCRIPTION:Independence\, basis\, dimension\, coordinates\, change of basi
+ s\n09:00 Warm-up recall (10 min): Without notes\, redo two problems from e
+ arlier topics or from the mistakes log.\n09:10 Worked examples (20 min): F
+ or each proof write its skeleton (assumption\, goal\, key step) and why th
+ e key step works. Then close it and rebuild the proof from the skeleton.\n
+ 09:30 Practice (70 min): Prove the statements yourself in full sentences. 
+ Stuck: unfold the definitions\, try a small case\, or look for a counterex
+ ample.\n10:40 Blank-page recall (20 min): From memory: definitions\, theor
+ em statements with all their conditions\, and one counterexample for each 
+ condition.
 END:VEVENT
 BEGIN:VEVENT
 UID:s9-20261028@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261028T113000
 DTEND;TZID=Europe/Helsinki:20261028T133000
 SUMMARY:Learn: Statistics II
 LOCATION:
-DESCRIPTION:Priors: Bayes' theorem\, conjugate pairs\, Jeffreys\, hierarchical
+DESCRIPTION:Priors: Bayes' theorem\, conjugate pairs\, Jeffreys\, hierarchi
+ cal\n11:30 Warm-up recall (10 min): Without notes\, redo two problems from
+  earlier topics or from the mistakes log.\n11:40 Worked examples (20 min):
+  For each worked example name the model\, the formula and what the result 
+ means in one sentence. Then cover it and redo it.\n12:00 Practice (70 min)
+ : Solve by hand: write the model\, derive\, compute\, and end with a one-s
+ entence interpretation. After 10 minutes stuck\, uncover one line.\n13:10 
+ Blank-page recall (20 min): Blank page: write today's formulas and traps f
+ rom memory\, check\, and copy what you missed to the formula sheet draft a
+ nd the mistakes log.
 END:VEVENT
 BEGIN:VEVENT
 UID:s10-20261029@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261029T090000
 DTEND;TZID=Europe/Helsinki:20261029T110000
 SUMMARY:Learn: Matrix Algebra
 LOCATION:
-DESCRIPTION:Independence\, basis\, dimension\, coordinates\, change of basis
+DESCRIPTION:Independence\, basis\, dimension\, coordinates\, change of basi
+ s\n09:00 Warm-up recall (10 min): Without notes\, redo two problems from e
+ arlier topics or from the mistakes log.\n09:10 Worked examples (20 min): F
+ or each proof write its skeleton (assumption\, goal\, key step) and why th
+ e key step works. Then close it and rebuild the proof from the skeleton.\n
+ 09:30 Practice (70 min): Prove the statements yourself in full sentences. 
+ Stuck: unfold the definitions\, try a small case\, or look for a counterex
+ ample.\n10:40 Blank-page recall (20 min): From memory: definitions\, theor
+ em statements with all their conditions\, and one counterexample for each 
+ condition.
 END:VEVENT
 BEGIN:VEVENT
 UID:s11-20261029@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261029T113000
 DTEND;TZID=Europe/Helsinki:20261029T133000
 SUMMARY:Learn: Integral Calculus
 LOCATION:
-DESCRIPTION:Solids of revolution: disk/washer/shell\, surface area\, mass
+DESCRIPTION:Solids of revolution: disk/washer/shell\, surface area\, mass\n
+ 11:30 Warm-up recall (10 min): Without notes\, redo two problems from earl
+ ier topics or from the mistakes log.\n11:40 Worked examples (20 min): Stud
+ y the worked examples line by line and say why each step is allowed. Then 
+ cover the solution and redo the example yourself.\n12:00 Practice (70 min)
+ : Solve from easy to exam level\, writing every step. Check each answer: d
+ ifferentiate the antiderivative\, sanity-check sign and size. After 10 min
+ utes stuck\, uncover only the next line.\n13:10 Blank-page recall (20 min)
+ : Blank page: write today's formulas and traps from memory\, check\, and c
+ opy what you missed to the formula sheet draft and the mistakes log.
 END:VEVENT
 BEGIN:VEVENT
 UID:s12-20261030@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261030T090000
 DTEND;TZID=Europe/Helsinki:20261030T110000
 SUMMARY:Learn: Matrix Algebra
 LOCATION:
-DESCRIPTION:Independence\, basis\, dimension\, coordinates\, change of basis + Systems\, inverse\, determinants\, Cramer\, dual vectors
+DESCRIPTION:Independence\, basis\, dimension\, coordinates\, change of basi
+ s + Systems\, inverse\, determinants\, Cramer\, dual vectors\n09:00 Warm-u
+ p recall (5 min): Without notes\, redo two problems from earlier topics or
+  from the mistakes log.\n09:05 Pre-test (10 min): Attempt one problem on t
+ his topic cold\, before reading anything. Getting it wrong is fine: trying
+  first makes the explanation stick.\n09:15 Concept overview (20 min): Read
+  the overview\, then write the key definitions word for word from memory. 
+ Proofs fail on fuzzy definitions.\n09:35 Worked examples (30 min): For eac
+ h proof write its skeleton (assumption\, goal\, key step) and why the key 
+ step works. Then close it and rebuild the proof from the skeleton.\n10:05 
+ Practice (45 min): Prove the statements yourself in full sentences. Stuck:
+  unfold the definitions\, try a small case\, or look for a counterexample.
+ \n10:50 Blank-page recall (10 min): From memory: definitions\, theorem sta
+ tements with all their conditions\, and one counterexample for each condit
+ ion.
 END:VEVENT
 BEGIN:VEVENT
 UID:s13-20261030@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261030T113000
 DTEND;TZID=Europe/Helsinki:20261030T133000
 SUMMARY:Learn: Statistics II
 LOCATION:
-DESCRIPTION:Likelihood: log-likelihood\, score equation\, MLE\, Fisher information
+DESCRIPTION:Likelihood: log-likelihood\, score equation\, MLE\, Fisher info
+ rmation\n11:30 Warm-up recall (5 min): Without notes\, redo two problems f
+ rom earlier topics or from the mistakes log.\n11:35 Pre-test (10 min): Att
+ empt one problem on this topic cold\, before reading anything. Getting it 
+ wrong is fine: trying first makes the explanation stick.\n11:45 Concept ov
+ erview (20 min): Read the beginner overview once\, then close it and write
+  from memory: what problem this topic solves\, the key formula or idea\, a
+ nd when to use it.\n12:05 Worked examples (30 min): For each worked exampl
+ e name the model\, the formula and what the result means in one sentence. 
+ Then cover it and redo it.\n12:35 Practice (45 min): Solve by hand: write 
+ the model\, derive\, compute\, and end with a one-sentence interpretation.
+  After 10 minutes stuck\, uncover one line.\n13:20 Blank-page recall (10 m
+ in): Blank page: write today's formulas and traps from memory\, check\, an
+ d copy what you missed to the formula sheet draft and the mistakes log.
 END:VEVENT
 BEGIN:VEVENT
 UID:s14-20261031@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261031T090000
 DTEND;TZID=Europe/Helsinki:20261031T110000
 SUMMARY:Learn: Matrix Algebra
 LOCATION:
-DESCRIPTION:Systems\, inverse\, determinants\, Cramer\, dual vectors
+DESCRIPTION:Systems\, inverse\, determinants\, Cramer\, dual vectors\n09:00
+  Warm-up recall (10 min): Without notes\, redo two problems from earlier t
+ opics or from the mistakes log.\n09:10 Worked examples (20 min): For each 
+ proof write its skeleton (assumption\, goal\, key step) and why the key st
+ ep works. Then close it and rebuild the proof from the skeleton.\n09:30 Pr
+ actice (70 min): Prove the statements yourself in full sentences. Stuck: u
+ nfold the definitions\, try a small case\, or look for a counterexample.\n
+ 10:40 Blank-page recall (20 min): From memory: definitions\, theorem state
+ ments with all their conditions\, and one counterexample for each conditio
+ n.
 END:VEVENT
 BEGIN:VEVENT
 UID:s15-20261031@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261031T113000
 DTEND;TZID=Europe/Helsinki:20261031T133000
 SUMMARY:Learn: Integral Calculus
 LOCATION:
-DESCRIPTION:Parametric curves: area\, arc length\, surface of revolution
+DESCRIPTION:Parametric curves: area\, arc length\, surface of revolution\n1
+ 1:30 Warm-up recall (5 min): Without notes\, redo two problems from earlie
+ r topics or from the mistakes log.\n11:35 Pre-test (10 min): Attempt one p
+ roblem on this topic cold\, before reading anything. Getting it wrong is f
+ ine: trying first makes the explanation stick.\n11:45 Concept overview (20
+  min): Read the beginner overview once\, then close it and write from memo
+ ry: what problem this topic solves\, the key formula or idea\, and when to
+  use it.\n12:05 Worked examples (30 min): Study the worked examples line b
+ y line and say why each step is allowed. Then cover the solution and redo 
+ the example yourself.\n12:35 Practice (45 min): Solve from easy to exam le
+ vel\, writing every step. Check each answer: differentiate the antiderivat
+ ive\, sanity-check sign and size. After 10 minutes stuck\, uncover only th
+ e next line.\n13:20 Blank-page recall (10 min): Blank page: write today's 
+ formulas and traps from memory\, check\, and copy what you missed to the f
+ ormula sheet draft and the mistakes log.
 END:VEVENT
 BEGIN:VEVENT
 UID:s16-20261102@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261102T090000
 DTEND;TZID=Europe/Helsinki:20261102T110000
 SUMMARY:Learn: Matrix Algebra
 LOCATION:
-DESCRIPTION:Systems\, inverse\, determinants\, Cramer\, dual vectors + Linear maps: kernel\, range\, rank-nullity\, injective/surjective
+DESCRIPTION:Systems\, inverse\, determinants\, Cramer\, dual vectors + Line
+ ar maps: kernel\, range\, rank-nullity\, injective/surjective\n09:00 Warm-
+ up recall (5 min): Without notes\, redo two problems from earlier topics o
+ r from the mistakes log.\n09:05 Pre-test (10 min): Attempt one problem on 
+ this topic cold\, before reading anything. Getting it wrong is fine: tryin
+ g first makes the explanation stick.\n09:15 Concept overview (20 min): Rea
+ d the overview\, then write the key definitions word for word from memory.
+  Proofs fail on fuzzy definitions.\n09:35 Worked examples (30 min): For ea
+ ch proof write its skeleton (assumption\, goal\, key step) and why the key
+  step works. Then close it and rebuild the proof from the skeleton.\n10:05
+  Practice (45 min): Prove the statements yourself in full sentences. Stuck
+ : unfold the definitions\, try a small case\, or look for a counterexample
+ .\n10:50 Blank-page recall (10 min): From memory: definitions\, theorem st
+ atements with all their conditions\, and one counterexample for each condi
+ tion.
 END:VEVENT
 BEGIN:VEVENT
 UID:s17-20261102@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261102T113000
 DTEND;TZID=Europe/Helsinki:20261102T133000
 SUMMARY:Learn: Statistics II
 LOCATION:
-DESCRIPTION:Likelihood: log-likelihood\, score equation\, MLE\, Fisher information + MC & MCMC: Gaussian-Gaussian update\, Metropolis-Hastings\, acceptance rate
+DESCRIPTION:Likelihood: log-likelihood\, score equation\, MLE\, Fisher info
+ rmation + MC & MCMC: Gaussian-Gaussian update\, Metropolis-Hastings\, acce
+ ptance rate\n11:30 Warm-up recall (5 min): Without notes\, redo two proble
+ ms from earlier topics or from the mistakes log.\n11:35 Pre-test (10 min):
+  Attempt one problem on this topic cold\, before reading anything. Getting
+  it wrong is fine: trying first makes the explanation stick.\n11:45 Concep
+ t overview (20 min): Read the beginner overview once\, then close it and w
+ rite from memory: what problem this topic solves\, the key formula or idea
+ \, and when to use it.\n12:05 Worked examples (30 min): For each worked ex
+ ample name the model\, the formula and what the result means in one senten
+ ce. Then cover it and redo it.\n12:35 Practice (45 min): Solve by hand: wr
+ ite the model\, derive\, compute\, and end with a one-sentence interpretat
+ ion. After 10 minutes stuck\, uncover one line.\n13:20 Blank-page recall (
+ 10 min): Blank page: write today's formulas and traps from memory\, check\
+ , and copy what you missed to the formula sheet draft and the mistakes log
+ .
 END:VEVENT
 BEGIN:VEVENT
 UID:s18-20261103@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261103T090000
 DTEND;TZID=Europe/Helsinki:20261103T110000
 SUMMARY:Learn: Matrix Algebra
 LOCATION:
-DESCRIPTION:Linear maps: kernel\, range\, rank-nullity\, injective/surjective
+DESCRIPTION:Linear maps: kernel\, range\, rank-nullity\, injective/surjecti
+ ve\n09:00 Warm-up recall (10 min): Without notes\, redo two problems from 
+ earlier topics or from the mistakes log.\n09:10 Worked examples (20 min): 
+ For each proof write its skeleton (assumption\, goal\, key step) and why t
+ he key step works. Then close it and rebuild the proof from the skeleton.\
+ n09:30 Practice (70 min): Prove the statements yourself in full sentences.
+  Stuck: unfold the definitions\, try a small case\, or look for a countere
+ xample.\n10:40 Blank-page recall (20 min): From memory: definitions\, theo
+ rem statements with all their conditions\, and one counterexample for each
+  condition.
 END:VEVENT
 BEGIN:VEVENT
 UID:s19-20261103@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261103T113000
 DTEND;TZID=Europe/Helsinki:20261103T133000
 SUMMARY:Learn: Integral Calculus
 LOCATION:
-DESCRIPTION:Polar curves: shapes\, area\, arc length\, inner loops
+DESCRIPTION:Polar curves: shapes\, area\, arc length\, inner loops\n11:30 W
+ arm-up recall (5 min): Without notes\, redo two problems from earlier topi
+ cs or from the mistakes log.\n11:35 Pre-test (10 min): Attempt one problem
+  on this topic cold\, before reading anything. Getting it wrong is fine: t
+ rying first makes the explanation stick.\n11:45 Concept overview (20 min):
+  Read the beginner overview once\, then close it and write from memory: wh
+ at problem this topic solves\, the key formula or idea\, and when to use i
+ t.\n12:05 Worked examples (30 min): Study the worked examples line by line
+  and say why each step is allowed. Then cover the solution and redo the ex
+ ample yourself.\n12:35 Practice (45 min): Solve from easy to exam level\, 
+ writing every step. Check each answer: differentiate the antiderivative\, 
+ sanity-check sign and size. After 10 minutes stuck\, uncover only the next
+  line.\n13:20 Blank-page recall (10 min): Blank page: write today's formul
+ as and traps from memory\, check\, and copy what you missed to the formula
+  sheet draft and the mistakes log.
 END:VEVENT
 BEGIN:VEVENT
 UID:s20-20261104@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261104T090000
 DTEND;TZID=Europe/Helsinki:20261104T110000
 SUMMARY:Learn: Matrix Algebra
 LOCATION:
-DESCRIPTION:Linear maps: kernel\, range\, rank-nullity\, injective/surjective
+DESCRIPTION:Linear maps: kernel\, range\, rank-nullity\, injective/surjecti
+ ve\n09:00 Warm-up recall (10 min): Without notes\, redo two problems from 
+ earlier topics or from the mistakes log.\n09:10 Worked examples (20 min): 
+ For each proof write its skeleton (assumption\, goal\, key step) and why t
+ he key step works. Then close it and rebuild the proof from the skeleton.\
+ n09:30 Practice (70 min): Prove the statements yourself in full sentences.
+  Stuck: unfold the definitions\, try a small case\, or look for a countere
+ xample.\n10:40 Blank-page recall (20 min): From memory: definitions\, theo
+ rem statements with all their conditions\, and one counterexample for each
+  condition.
 END:VEVENT
 BEGIN:VEVENT
 UID:s21-20261104@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261104T113000
 DTEND;TZID=Europe/Helsinki:20261104T133000
 SUMMARY:Learn: Statistics II
 LOCATION:
-DESCRIPTION:MC & MCMC: Gaussian-Gaussian update\, Metropolis-Hastings\, acceptance rate
+DESCRIPTION:MC & MCMC: Gaussian-Gaussian update\, Metropolis-Hastings\, acc
+ eptance rate\n11:30 Warm-up recall (10 min): Without notes\, redo two prob
+ lems from earlier topics or from the mistakes log.\n11:40 Worked examples 
+ (20 min): For each worked example name the model\, the formula and what th
+ e result means in one sentence. Then cover it and redo it.\n12:00 Practice
+  (70 min): Solve by hand: write the model\, derive\, compute\, and end wit
+ h a one-sentence interpretation. After 10 minutes stuck\, uncover one line
+ .\n13:10 Blank-page recall (20 min): Blank page: write today's formulas an
+ d traps from memory\, check\, and copy what you missed to the formula shee
+ t draft and the mistakes log.
 END:VEVENT
 BEGIN:VEVENT
 UID:s22-20261105@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261105T090000
 DTEND;TZID=Europe/Helsinki:20261105T110000
 SUMMARY:Learn: Matrix Algebra
 LOCATION:
-DESCRIPTION:Eigenvalues\, eigenbasis\, T^k by induction\, diagonalisation
+DESCRIPTION:Eigenvalues\, eigenbasis\, T^k by induction\, diagonalisation\n
+ 09:00 Warm-up recall (5 min): Without notes\, redo two problems from earli
+ er topics or from the mistakes log.\n09:05 Pre-test (10 min): Attempt one 
+ problem on this topic cold\, before reading anything. Getting it wrong is 
+ fine: trying first makes the explanation stick.\n09:15 Concept overview (2
+ 0 min): Read the overview\, then write the key definitions word for word f
+ rom memory. Proofs fail on fuzzy definitions.\n09:35 Worked examples (30 m
+ in): For each proof write its skeleton (assumption\, goal\, key step) and 
+ why the key step works. Then close it and rebuild the proof from the skele
+ ton.\n10:05 Practice (45 min): Prove the statements yourself in full sente
+ nces. Stuck: unfold the definitions\, try a small case\, or look for a cou
+ nterexample.\n10:50 Blank-page recall (10 min): From memory: definitions\,
+  theorem statements with all their conditions\, and one counterexample for
+  each condition.
 END:VEVENT
 BEGIN:VEVENT
 UID:s23-20261105@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261105T113000
 DTEND;TZID=Europe/Helsinki:20261105T133000
 SUMMARY:Learn: Integral Calculus
 LOCATION:
-DESCRIPTION:Polar curves: shapes\, area\, arc length\, inner loops + Probability densities: normalise\, E[X]\, CDF\, median
+DESCRIPTION:Polar curves: shapes\, area\, arc length\, inner loops + Probab
+ ility densities: normalise\, E[X]\, CDF\, median\n11:30 Warm-up recall (5 
+ min): Without notes\, redo two problems from earlier topics or from the mi
+ stakes log.\n11:35 Pre-test (10 min): Attempt one problem on this topic co
+ ld\, before reading anything. Getting it wrong is fine: trying first makes
+  the explanation stick.\n11:45 Concept overview (20 min): Read the beginne
+ r overview once\, then close it and write from memory: what problem this t
+ opic solves\, the key formula or idea\, and when to use it.\n12:05 Worked 
+ examples (30 min): Study the worked examples line by line and say why each
+  step is allowed. Then cover the solution and redo the example yourself.\n
+ 12:35 Practice (45 min): Solve from easy to exam level\, writing every ste
+ p. Check each answer: differentiate the antiderivative\, sanity-check sign
+  and size. After 10 minutes stuck\, uncover only the next line.\n13:20 Bla
+ nk-page recall (10 min): Blank page: write today's formulas and traps from
+  memory\, check\, and copy what you missed to the formula sheet draft and 
+ the mistakes log.
 END:VEVENT
 BEGIN:VEVENT
 UID:s24-20261106@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261106T090000
 DTEND;TZID=Europe/Helsinki:20261106T110000
 SUMMARY:Learn: Matrix Algebra
 LOCATION:
-DESCRIPTION:Eigenvalues\, eigenbasis\, T^k by induction\, diagonalisation
+DESCRIPTION:Eigenvalues\, eigenbasis\, T^k by induction\, diagonalisation\n
+ 09:00 Warm-up recall (10 min): Without notes\, redo two problems from earl
+ ier topics or from the mistakes log.\n09:10 Worked examples (20 min): For 
+ each proof write its skeleton (assumption\, goal\, key step) and why the k
+ ey step works. Then close it and rebuild the proof from the skeleton.\n09:
+ 30 Practice (70 min): Prove the statements yourself in full sentences. Stu
+ ck: unfold the definitions\, try a small case\, or look for a counterexamp
+ le.\n10:40 Blank-page recall (20 min): From memory: definitions\, theorem 
+ statements with all their conditions\, and one counterexample for each con
+ dition.
 END:VEVENT
 BEGIN:VEVENT
 UID:s25-20261106@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261106T113000
 DTEND;TZID=Europe/Helsinki:20261106T133000
 SUMMARY:Learn: Statistics II
 LOCATION:
-DESCRIPTION:MC & MCMC: Gaussian-Gaussian update\, Metropolis-Hastings\, acceptance rate + Model selection: AIC\, BIC\, Bayes factors\, Jeffreys scale\, BMA weights
+DESCRIPTION:MC & MCMC: Gaussian-Gaussian update\, Metropolis-Hastings\, acc
+ eptance rate + Model selection: AIC\, BIC\, Bayes factors\, Jeffreys scale
+ \, BMA weights\n11:30 Warm-up recall (5 min): Without notes\, redo two pro
+ blems from earlier topics or from the mistakes log.\n11:35 Pre-test (10 mi
+ n): Attempt one problem on this topic cold\, before reading anything. Gett
+ ing it wrong is fine: trying first makes the explanation stick.\n11:45 Con
+ cept overview (20 min): Read the beginner overview once\, then close it an
+ d write from memory: what problem this topic solves\, the key formula or i
+ dea\, and when to use it.\n12:05 Worked examples (30 min): For each worked
+  example name the model\, the formula and what the result means in one sen
+ tence. Then cover it and redo it.\n12:35 Practice (45 min): Solve by hand:
+  write the model\, derive\, compute\, and end with a one-sentence interpre
+ tation. After 10 minutes stuck\, uncover one line.\n13:20 Blank-page recal
+ l (10 min): Blank page: write today's formulas and traps from memory\, che
+ ck\, and copy what you missed to the formula sheet draft and the mistakes 
+ log.
 END:VEVENT
 BEGIN:VEVENT
 UID:s26-20261107@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261107T090000
 DTEND;TZID=Europe/Helsinki:20261107T110000
 SUMMARY:Learn: Matrix Algebra
 LOCATION:
-DESCRIPTION:Eigenvalues\, eigenbasis\, T^k by induction\, diagonalisation + Inner products\, Cauchy-Schwarz\, projection\, Gram-Schmidt\, least squares
+DESCRIPTION:Eigenvalues\, eigenbasis\, T^k by induction\, diagonalisation +
+  Inner products\, Cauchy-Schwarz\, projection\, Gram-Schmidt\, least squar
+ es\n09:00 Warm-up recall (5 min): Without notes\, redo two problems from e
+ arlier topics or from the mistakes log.\n09:05 Pre-test (10 min): Attempt 
+ one problem on this topic cold\, before reading anything. Getting it wrong
+  is fine: trying first makes the explanation stick.\n09:15 Concept overvie
+ w (20 min): Read the overview\, then write the key definitions word for wo
+ rd from memory. Proofs fail on fuzzy definitions.\n09:35 Worked examples (
+ 30 min): For each proof write its skeleton (assumption\, goal\, key step) 
+ and why the key step works. Then close it and rebuild the proof from the s
+ keleton.\n10:05 Practice (45 min): Prove the statements yourself in full s
+ entences. Stuck: unfold the definitions\, try a small case\, or look for a
+  counterexample.\n10:50 Blank-page recall (10 min): From memory: definitio
+ ns\, theorem statements with all their conditions\, and one counterexample
+  for each condition.
 END:VEVENT
 BEGIN:VEVENT
 UID:s27-20261107@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261107T113000
 DTEND;TZID=Europe/Helsinki:20261107T133000
 SUMMARY:Learn: Integral Calculus
 LOCATION:
-DESCRIPTION:Probability densities: normalise\, E[X]\, CDF\, median
+DESCRIPTION:Probability densities: normalise\, E[X]\, CDF\, median\n11:30 W
+ arm-up recall (10 min): Without notes\, redo two problems from earlier top
+ ics or from the mistakes log.\n11:40 Worked examples (20 min): Study the w
+ orked examples line by line and say why each step is allowed. Then cover t
+ he solution and redo the example yourself.\n12:00 Practice (70 min): Solve
+  from easy to exam level\, writing every step. Check each answer: differen
+ tiate the antiderivative\, sanity-check sign and size. After 10 minutes st
+ uck\, uncover only the next line.\n13:10 Blank-page recall (20 min): Blank
+  page: write today's formulas and traps from memory\, check\, and copy wha
+ t you missed to the formula sheet draft and the mistakes log.
 END:VEVENT
 BEGIN:VEVENT
 UID:s28-20261109@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261109T090000
 DTEND;TZID=Europe/Helsinki:20261109T110000
 SUMMARY:Learn: Matrix Algebra
 LOCATION:
-DESCRIPTION:Inner products\, Cauchy-Schwarz\, projection\, Gram-Schmidt\, least squares
+DESCRIPTION:Inner products\, Cauchy-Schwarz\, projection\, Gram-Schmidt\, l
+ east squares\n09:00 Warm-up recall (10 min): Without notes\, redo two prob
+ lems from earlier topics or from the mistakes log.\n09:10 Worked examples 
+ (20 min): For each proof write its skeleton (assumption\, goal\, key step)
+  and why the key step works. Then close it and rebuild the proof from the 
+ skeleton.\n09:30 Practice (70 min): Prove the statements yourself in full 
+ sentences. Stuck: unfold the definitions\, try a small case\, or look for 
+ a counterexample.\n10:40 Blank-page recall (20 min): From memory: definiti
+ ons\, theorem statements with all their conditions\, and one counterexampl
+ e for each condition.
 END:VEVENT
 BEGIN:VEVENT
 UID:s29-20261109@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261109T113000
 DTEND;TZID=Europe/Helsinki:20261109T133000
 SUMMARY:Learn: Statistics II
 LOCATION:
-DESCRIPTION:Model selection: AIC\, BIC\, Bayes factors\, Jeffreys scale\, BMA weights
+DESCRIPTION:Model selection: AIC\, BIC\, Bayes factors\, Jeffreys scale\, B
+ MA weights\n11:30 Warm-up recall (10 min): Without notes\, redo two proble
+ ms from earlier topics or from the mistakes log.\n11:40 Worked examples (2
+ 0 min): For each worked example name the model\, the formula and what the 
+ result means in one sentence. Then cover it and redo it.\n12:00 Practice (
+ 70 min): Solve by hand: write the model\, derive\, compute\, and end with 
+ a one-sentence interpretation. After 10 minutes stuck\, uncover one line.\
+ n13:10 Blank-page recall (20 min): Blank page: write today's formulas and 
+ traps from memory\, check\, and copy what you missed to the formula sheet 
+ draft and the mistakes log.
 END:VEVENT
 BEGIN:VEVENT
 UID:s30-20261110@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261110T090000
 DTEND;TZID=Europe/Helsinki:20261110T110000
 SUMMARY:Learn: Matrix Algebra
 LOCATION:
-DESCRIPTION:Inner products\, Cauchy-Schwarz\, projection\, Gram-Schmidt\, least squares
+DESCRIPTION:Inner products\, Cauchy-Schwarz\, projection\, Gram-Schmidt\, l
+ east squares\n09:00 Warm-up recall (10 min): Without notes\, redo two prob
+ lems from earlier topics or from the mistakes log.\n09:10 Worked examples 
+ (20 min): For each proof write its skeleton (assumption\, goal\, key step)
+  and why the key step works. Then close it and rebuild the proof from the 
+ skeleton.\n09:30 Practice (70 min): Prove the statements yourself in full 
+ sentences. Stuck: unfold the definitions\, try a small case\, or look for 
+ a counterexample.\n10:40 Blank-page recall (20 min): From memory: definiti
+ ons\, theorem statements with all their conditions\, and one counterexampl
+ e for each condition.
 END:VEVENT
 BEGIN:VEVENT
 UID:s31-20261110@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261110T113000
 DTEND;TZID=Europe/Helsinki:20261110T133000
 SUMMARY:Learn: Integral Calculus
 LOCATION:
-DESCRIPTION:Physical applications: centre of mass\, work\, related rates
+DESCRIPTION:Physical applications: centre of mass\, work\, related rates\n1
+ 1:30 Warm-up recall (5 min): Without notes\, redo two problems from earlie
+ r topics or from the mistakes log.\n11:35 Pre-test (10 min): Attempt one p
+ roblem on this topic cold\, before reading anything. Getting it wrong is f
+ ine: trying first makes the explanation stick.\n11:45 Concept overview (20
+  min): Read the beginner overview once\, then close it and write from memo
+ ry: what problem this topic solves\, the key formula or idea\, and when to
+  use it.\n12:05 Worked examples (30 min): Study the worked examples line b
+ y line and say why each step is allowed. Then cover the solution and redo 
+ the example yourself.\n12:35 Practice (45 min): Solve from easy to exam le
+ vel\, writing every step. Check each answer: differentiate the antiderivat
+ ive\, sanity-check sign and size. After 10 minutes stuck\, uncover only th
+ e next line.\n13:20 Blank-page recall (10 min): Blank page: write today's 
+ formulas and traps from memory\, check\, and copy what you missed to the f
+ ormula sheet draft and the mistakes log.
 END:VEVENT
 BEGIN:VEVENT
 UID:s32-20261111@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261111T090000
 DTEND;TZID=Europe/Helsinki:20261111T110000
 SUMMARY:Learn: Statistics II
 LOCATION:
-DESCRIPTION:Time series: stationarity\, ACF/PACF to ARMA(p\,q)\, ARIMA/SARIMA
+DESCRIPTION:Time series: stationarity\, ACF/PACF to ARMA(p\,q)\, ARIMA/SARI
+ MA\n09:00 Warm-up recall (5 min): Without notes\, redo two problems from e
+ arlier topics or from the mistakes log.\n09:05 Pre-test (10 min): Attempt 
+ one problem on this topic cold\, before reading anything. Getting it wrong
+  is fine: trying first makes the explanation stick.\n09:15 Concept overvie
+ w (20 min): Read the beginner overview once\, then close it and write from
+  memory: what problem this topic solves\, the key formula or idea\, and wh
+ en to use it.\n09:35 Worked examples (30 min): For each worked example nam
+ e the model\, the formula and what the result means in one sentence. Then 
+ cover it and redo it.\n10:05 Practice (45 min): Solve by hand: write the m
+ odel\, derive\, compute\, and end with a one-sentence interpretation. Afte
+ r 10 minutes stuck\, uncover one line.\n10:50 Blank-page recall (10 min): 
+ Blank page: write today's formulas and traps from memory\, check\, and cop
+ y what you missed to the formula sheet draft and the mistakes log.
 END:VEVENT
 BEGIN:VEVENT
 UID:s33-20261111@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261111T113000
 DTEND;TZID=Europe/Helsinki:20261111T133000
 SUMMARY:Learn: Matrix Algebra
 LOCATION:
-DESCRIPTION:Inner products\, Cauchy-Schwarz\, projection\, Gram-Schmidt\, least squares
+DESCRIPTION:Inner products\, Cauchy-Schwarz\, projection\, Gram-Schmidt\, l
+ east squares\n11:30 Warm-up recall (10 min): Without notes\, redo two prob
+ lems from earlier topics or from the mistakes log.\n11:40 Worked examples 
+ (20 min): For each proof write its skeleton (assumption\, goal\, key step)
+  and why the key step works. Then close it and rebuild the proof from the 
+ skeleton.\n12:00 Practice (70 min): Prove the statements yourself in full 
+ sentences. Stuck: unfold the definitions\, try a small case\, or look for 
+ a counterexample.\n13:10 Blank-page recall (20 min): From memory: definiti
+ ons\, theorem statements with all their conditions\, and one counterexampl
+ e for each condition.
 END:VEVENT
 BEGIN:VEVENT
 UID:s34-20261112@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261112T090000
 DTEND;TZID=Europe/Helsinki:20261112T110000
 SUMMARY:Learn: Integral Calculus
 LOCATION:
-DESCRIPTION:Double integrals over polygonal regions
+DESCRIPTION:Double integrals over polygonal regions\n09:00 Warm-up recall (
+ 5 min): Without notes\, redo two problems from earlier topics or from the 
+ mistakes log.\n09:05 Pre-test (10 min): Attempt one problem on this topic 
+ cold\, before reading anything. Getting it wrong is fine: trying first mak
+ es the explanation stick.\n09:15 Concept overview (20 min): Read the begin
+ ner overview once\, then close it and write from memory: what problem this
+  topic solves\, the key formula or idea\, and when to use it.\n09:35 Worke
+ d examples (30 min): Study the worked examples line by line and say why ea
+ ch step is allowed. Then cover the solution and redo the example yourself.
+ \n10:05 Practice (45 min): Solve from easy to exam level\, writing every s
+ tep. Check each answer: differentiate the antiderivative\, sanity-check si
+ gn and size. After 10 minutes stuck\, uncover only the next line.\n10:50 B
+ lank-page recall (10 min): Blank page: write today's formulas and traps fr
+ om memory\, check\, and copy what you missed to the formula sheet draft an
+ d the mistakes log.
 END:VEVENT
 BEGIN:VEVENT
 UID:s35-20261112@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261112T113000
 DTEND;TZID=Europe/Helsinki:20261112T133000
 SUMMARY:Learn: Statistics II
 LOCATION:
-DESCRIPTION:Time series: stationarity\, ACF/PACF to ARMA(p\,q)\, ARIMA/SARIMA
+DESCRIPTION:Time series: stationarity\, ACF/PACF to ARMA(p\,q)\, ARIMA/SARI
+ MA\n11:30 Warm-up recall (10 min): Without notes\, redo two problems from 
+ earlier topics or from the mistakes log.\n11:40 Worked examples (20 min): 
+ For each worked example name the model\, the formula and what the result m
+ eans in one sentence. Then cover it and redo it.\n12:00 Practice (70 min):
+  Solve by hand: write the model\, derive\, compute\, and end with a one-se
+ ntence interpretation. After 10 minutes stuck\, uncover one line.\n13:10 B
+ lank-page recall (20 min): Blank page: write today's formulas and traps fr
+ om memory\, check\, and copy what you missed to the formula sheet draft an
+ d the mistakes log.
 END:VEVENT
 BEGIN:VEVENT
 UID:s36-20261113@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261113T090000
 DTEND;TZID=Europe/Helsinki:20261113T110000
 SUMMARY:Practice: Matrix Algebra
 LOCATION:
-DESCRIPTION:Proof rules\, subspaces\, sums\, unions\, counterexamples
+DESCRIPTION:Proof rules\, subspaces\, sums\, unions\, counterexamples\n09:0
+ 0 Warm-up recall (10 min): Without notes\, redo two problems from earlier 
+ topics or from the mistakes log.\n09:10 Setup drill (25 min): Strategy dri
+ ll: for 5-6 mixed statements only decide true or false and the proof idea 
+ (direct\, contradiction\, induction\, counterexample).\n09:35 Mixed timed 
+ set (65 min): Problems from different topics in random order\, timed at th
+ e exam's pace (minutes per point of the real exam).\n10:40 Mark and log (2
+ 0 min): Mark against the solutions. Every lost point goes into the mistake
+ s log with its cause: concept\, setup\, algebra or time.
 END:VEVENT
 BEGIN:VEVENT
 UID:s37-20261113@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261113T113000
 DTEND;TZID=Europe/Helsinki:20261113T133000
 SUMMARY:Practice: Statistics II
 LOCATION:
-DESCRIPTION:Priors: Bayes' theorem\, conjugate pairs\, Jeffreys\, hierarchical
+DESCRIPTION:Priors: Bayes' theorem\, conjugate pairs\, Jeffreys\, hierarchi
+ cal\n11:30 Warm-up recall (10 min): Without notes\, redo two problems from
+  earlier topics or from the mistakes log.\n11:40 Setup drill (25 min): Mod
+ el drill: for 5-6 mixed problems only name the distribution or model and t
+ he formula you would use. Then check.\n12:05 Mixed timed set (65 min): Pro
+ blems from different topics in random order\, timed at the exam's pace (mi
+ nutes per point of the real exam).\n13:10 Mark and log (20 min): Mark agai
+ nst the solutions. Every lost point goes into the mistakes log with its ca
+ use: concept\, setup\, algebra or time.
 END:VEVENT
 BEGIN:VEVENT
 UID:s38-20261114@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261114T090000
 DTEND;TZID=Europe/Helsinki:20261114T110000
 SUMMARY:Practice: Matrix Algebra
 LOCATION:
-DESCRIPTION:Proof rules\, subspaces\, sums\, unions\, counterexamples + Independence\, basis\, dimension\, coordinates\, change of basis
+DESCRIPTION:Proof rules\, subspaces\, sums\, unions\, counterexamples + Ind
+ ependence\, basis\, dimension\, coordinates\, change of basis\n09:00 Warm-
+ up recall (10 min): Without notes\, redo two problems from earlier topics 
+ or from the mistakes log.\n09:10 Setup drill (25 min): Strategy drill: for
+  5-6 mixed statements only decide true or false and the proof idea (direct
+ \, contradiction\, induction\, counterexample).\n09:35 Mixed timed set (65
+  min): Problems from different topics in random order\, timed at the exam'
+ s pace (minutes per point of the real exam).\n10:40 Mark and log (20 min):
+  Mark against the solutions. Every lost point goes into the mistakes log w
+ ith its cause: concept\, setup\, algebra or time.
 END:VEVENT
 BEGIN:VEVENT
 UID:s39-20261114@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261114T113000
 DTEND;TZID=Europe/Helsinki:20261114T133000
 SUMMARY:Practice: Integral Calculus
 LOCATION:
-DESCRIPTION:Techniques refresher: parts\, substitution\, trig identities + Definite integrals: absolute value\, piecewise\, substitution limits
+DESCRIPTION:Techniques refresher: parts\, substitution\, trig identities + 
+ Definite integrals: absolute value\, piecewise\, substitution limits\n11:3
+ 0 Warm-up recall (10 min): Without notes\, redo two problems from earlier 
+ topics or from the mistakes log.\n11:40 Setup drill (25 min): For 5-6 mixe
+ d problems only sketch the region and write the integral with its limits\,
+  do not evaluate. Setup is where most points are lost.\n12:05 Mixed timed 
+ set (65 min): Problems from different topics in random order\, timed at th
+ e exam's pace (minutes per point of the real exam).\n13:10 Mark and log (2
+ 0 min): Mark against the solutions. Every lost point goes into the mistake
+ s log with its cause: concept\, setup\, algebra or time.
 END:VEVENT
 BEGIN:VEVENT
 UID:s40-20261116@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261116T090000
 DTEND;TZID=Europe/Helsinki:20261116T110000
 SUMMARY:Practice: Matrix Algebra
 LOCATION:
-DESCRIPTION:Independence\, basis\, dimension\, coordinates\, change of basis
+DESCRIPTION:Independence\, basis\, dimension\, coordinates\, change of basi
+ s\n09:00 Warm-up recall (10 min): Without notes\, redo two problems from e
+ arlier topics or from the mistakes log.\n09:10 Setup drill (25 min): Strat
+ egy drill: for 5-6 mixed statements only decide true or false and the proo
+ f idea (direct\, contradiction\, induction\, counterexample).\n09:35 Mixed
+  timed set (65 min): Problems from different topics in random order\, time
+ d at the exam's pace (minutes per point of the real exam).\n10:40 Mark and
+  log (20 min): Mark against the solutions. Every lost point goes into the 
+ mistakes log with its cause: concept\, setup\, algebra or time.
 END:VEVENT
 BEGIN:VEVENT
 UID:s41-20261116@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261116T113000
 DTEND;TZID=Europe/Helsinki:20261116T133000
 SUMMARY:Practice: Statistics II
 LOCATION:
-DESCRIPTION:Likelihood: log-likelihood\, score equation\, MLE\, Fisher information
+DESCRIPTION:Likelihood: log-likelihood\, score equation\, MLE\, Fisher info
+ rmation\n11:30 Warm-up recall (10 min): Without notes\, redo two problems 
+ from earlier topics or from the mistakes log.\n11:40 Setup drill (25 min):
+  Model drill: for 5-6 mixed problems only name the distribution or model a
+ nd the formula you would use. Then check.\n12:05 Mixed timed set (65 min):
+  Problems from different topics in random order\, timed at the exam's pace
+  (minutes per point of the real exam).\n13:10 Mark and log (20 min): Mark 
+ against the solutions. Every lost point goes into the mistakes log with it
+ s cause: concept\, setup\, algebra or time.
 END:VEVENT
 BEGIN:VEVENT
 UID:s42-20261117@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261117T090000
 DTEND;TZID=Europe/Helsinki:20261117T110000
 SUMMARY:Practice: Matrix Algebra
 LOCATION:
-DESCRIPTION:Independence\, basis\, dimension\, coordinates\, change of basis + Systems\, inverse\, determinants\, Cramer\, dual vectors
+DESCRIPTION:Independence\, basis\, dimension\, coordinates\, change of basi
+ s + Systems\, inverse\, determinants\, Cramer\, dual vectors\n09:00 Warm-u
+ p recall (10 min): Without notes\, redo two problems from earlier topics o
+ r from the mistakes log.\n09:10 Setup drill (25 min): Strategy drill: for 
+ 5-6 mixed statements only decide true or false and the proof idea (direct\
+ , contradiction\, induction\, counterexample).\n09:35 Mixed timed set (65 
+ min): Problems from different topics in random order\, timed at the exam's
+  pace (minutes per point of the real exam).\n10:40 Mark and log (20 min): 
+ Mark against the solutions. Every lost point goes into the mistakes log wi
+ th its cause: concept\, setup\, algebra or time.
 END:VEVENT
 BEGIN:VEVENT
 UID:s43-20261117@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261117T113000
 DTEND;TZID=Europe/Helsinki:20261117T133000
 SUMMARY:Practice: Integral Calculus
 LOCATION:
-DESCRIPTION:Solids of revolution: disk/washer/shell\, surface area\, mass
+DESCRIPTION:Solids of revolution: disk/washer/shell\, surface area\, mass\n
+ 11:30 Warm-up recall (10 min): Without notes\, redo two problems from earl
+ ier topics or from the mistakes log.\n11:40 Setup drill (25 min): For 5-6 
+ mixed problems only sketch the region and write the integral with its limi
+ ts\, do not evaluate. Setup is where most points are lost.\n12:05 Mixed ti
+ med set (65 min): Problems from different topics in random order\, timed a
+ t the exam's pace (minutes per point of the real exam).\n13:10 Mark and lo
+ g (20 min): Mark against the solutions. Every lost point goes into the mis
+ takes log with its cause: concept\, setup\, algebra or time.
 END:VEVENT
 BEGIN:VEVENT
 UID:s44-20261118@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261118T090000
 DTEND;TZID=Europe/Helsinki:20261118T110000
 SUMMARY:Practice: Matrix Algebra
 LOCATION:
-DESCRIPTION:Systems\, inverse\, determinants\, Cramer\, dual vectors + Linear maps: kernel\, range\, rank-nullity\, injective/surjective
+DESCRIPTION:Systems\, inverse\, determinants\, Cramer\, dual vectors + Line
+ ar maps: kernel\, range\, rank-nullity\, injective/surjective\n09:00 Warm-
+ up recall (10 min): Without notes\, redo two problems from earlier topics 
+ or from the mistakes log.\n09:10 Setup drill (25 min): Strategy drill: for
+  5-6 mixed statements only decide true or false and the proof idea (direct
+ \, contradiction\, induction\, counterexample).\n09:35 Mixed timed set (65
+  min): Problems from different topics in random order\, timed at the exam'
+ s pace (minutes per point of the real exam).\n10:40 Mark and log (20 min):
+  Mark against the solutions. Every lost point goes into the mistakes log w
+ ith its cause: concept\, setup\, algebra or time.
 END:VEVENT
 BEGIN:VEVENT
 UID:s45-20261118@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261118T113000
 DTEND;TZID=Europe/Helsinki:20261118T133000
 SUMMARY:Practice: Statistics II
 LOCATION:
-DESCRIPTION:MC & MCMC: Gaussian-Gaussian update\, Metropolis-Hastings\, acceptance rate
+DESCRIPTION:MC & MCMC: Gaussian-Gaussian update\, Metropolis-Hastings\, acc
+ eptance rate\n11:30 Warm-up recall (10 min): Without notes\, redo two prob
+ lems from earlier topics or from the mistakes log.\n11:40 Setup drill (25 
+ min): Model drill: for 5-6 mixed problems only name the distribution or mo
+ del and the formula you would use. Then check.\n12:05 Mixed timed set (65 
+ min): Problems from different topics in random order\, timed at the exam's
+  pace (minutes per point of the real exam).\n13:10 Mark and log (20 min): 
+ Mark against the solutions. Every lost point goes into the mistakes log wi
+ th its cause: concept\, setup\, algebra or time.
 END:VEVENT
 BEGIN:VEVENT
 UID:s46-20261119@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261119T090000
 DTEND;TZID=Europe/Helsinki:20261119T110000
 SUMMARY:Practice: Matrix Algebra
 LOCATION:
-DESCRIPTION:Linear maps: kernel\, range\, rank-nullity\, injective/surjective
+DESCRIPTION:Linear maps: kernel\, range\, rank-nullity\, injective/surjecti
+ ve\n09:00 Warm-up recall (10 min): Without notes\, redo two problems from 
+ earlier topics or from the mistakes log.\n09:10 Setup drill (25 min): Stra
+ tegy drill: for 5-6 mixed statements only decide true or false and the pro
+ of idea (direct\, contradiction\, induction\, counterexample).\n09:35 Mixe
+ d timed set (65 min): Problems from different topics in random order\, tim
+ ed at the exam's pace (minutes per point of the real exam).\n10:40 Mark an
+ d log (20 min): Mark against the solutions. Every lost point goes into the
+  mistakes log with its cause: concept\, setup\, algebra or time.
 END:VEVENT
 BEGIN:VEVENT
 UID:s47-20261119@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261119T113000
 DTEND;TZID=Europe/Helsinki:20261119T133000
 SUMMARY:Practice: Integral Calculus
 LOCATION:
-DESCRIPTION:Parametric curves: area\, arc length\, surface of revolution + Polar curves: shapes\, area\, arc length\, inner loops
+DESCRIPTION:Parametric curves: area\, arc length\, surface of revolution + 
+ Polar curves: shapes\, area\, arc length\, inner loops\n11:30 Warm-up reca
+ ll (10 min): Without notes\, redo two problems from earlier topics or from
+  the mistakes log.\n11:40 Setup drill (25 min): For 5-6 mixed problems onl
+ y sketch the region and write the integral with its limits\, do not evalua
+ te. Setup is where most points are lost.\n12:05 Mixed timed set (65 min): 
+ Problems from different topics in random order\, timed at the exam's pace 
+ (minutes per point of the real exam).\n13:10 Mark and log (20 min): Mark a
+ gainst the solutions. Every lost point goes into the mistakes log with its
+  cause: concept\, setup\, algebra or time.
 END:VEVENT
 BEGIN:VEVENT
 UID:s48-20261120@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261120T090000
 DTEND;TZID=Europe/Helsinki:20261120T110000
 SUMMARY:Practice: Matrix Algebra
 LOCATION:
-DESCRIPTION:Eigenvalues\, eigenbasis\, T^k by induction\, diagonalisation
+DESCRIPTION:Eigenvalues\, eigenbasis\, T^k by induction\, diagonalisation\n
+ 09:00 Warm-up recall (10 min): Without notes\, redo two problems from earl
+ ier topics or from the mistakes log.\n09:10 Setup drill (25 min): Strategy
+  drill: for 5-6 mixed statements only decide true or false and the proof i
+ dea (direct\, contradiction\, induction\, counterexample).\n09:35 Mixed ti
+ med set (65 min): Problems from different topics in random order\, timed a
+ t the exam's pace (minutes per point of the real exam).\n10:40 Mark and lo
+ g (20 min): Mark against the solutions. Every lost point goes into the mis
+ takes log with its cause: concept\, setup\, algebra or time.
 END:VEVENT
 BEGIN:VEVENT
 UID:s49-20261120@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261120T113000
 DTEND;TZID=Europe/Helsinki:20261120T133000
 SUMMARY:Practice: Statistics II
 LOCATION:
-DESCRIPTION:Model selection: AIC\, BIC\, Bayes factors\, Jeffreys scale\, BMA weights
+DESCRIPTION:Model selection: AIC\, BIC\, Bayes factors\, Jeffreys scale\, B
+ MA weights\n11:30 Warm-up recall (10 min): Without notes\, redo two proble
+ ms from earlier topics or from the mistakes log.\n11:40 Setup drill (25 mi
+ n): Model drill: for 5-6 mixed problems only name the distribution or mode
+ l and the formula you would use. Then check.\n12:05 Mixed timed set (65 mi
+ n): Problems from different topics in random order\, timed at the exam's p
+ ace (minutes per point of the real exam).\n13:10 Mark and log (20 min): Ma
+ rk against the solutions. Every lost point goes into the mistakes log with
+  its cause: concept\, setup\, algebra or time.
 END:VEVENT
 BEGIN:VEVENT
 UID:s50-20261121@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261121T090000
 DTEND;TZID=Europe/Helsinki:20261121T110000
 SUMMARY:Practice: Matrix Algebra
 LOCATION:
-DESCRIPTION:Eigenvalues\, eigenbasis\, T^k by induction\, diagonalisation + Inner products\, Cauchy-Schwarz\, projection\, Gram-Schmidt\, least squares
+DESCRIPTION:Eigenvalues\, eigenbasis\, T^k by induction\, diagonalisation +
+  Inner products\, Cauchy-Schwarz\, projection\, Gram-Schmidt\, least squar
+ es\n09:00 Warm-up recall (10 min): Without notes\, redo two problems from 
+ earlier topics or from the mistakes log.\n09:10 Setup drill (25 min): Stra
+ tegy drill: for 5-6 mixed statements only decide true or false and the pro
+ of idea (direct\, contradiction\, induction\, counterexample).\n09:35 Mixe
+ d timed set (65 min): Problems from different topics in random order\, tim
+ ed at the exam's pace (minutes per point of the real exam).\n10:40 Mark an
+ d log (20 min): Mark against the solutions. Every lost point goes into the
+  mistakes log with its cause: concept\, setup\, algebra or time.
 END:VEVENT
 BEGIN:VEVENT
 UID:s51-20261121@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261121T113000
 DTEND;TZID=Europe/Helsinki:20261121T133000
 SUMMARY:Practice: Integral Calculus
 LOCATION:
-DESCRIPTION:Probability densities: normalise\, E[X]\, CDF\, median
+DESCRIPTION:Probability densities: normalise\, E[X]\, CDF\, median\n11:30 W
+ arm-up recall (10 min): Without notes\, redo two problems from earlier top
+ ics or from the mistakes log.\n11:40 Setup drill (25 min): For 5-6 mixed p
+ roblems only sketch the region and write the integral with its limits\, do
+  not evaluate. Setup is where most points are lost.\n12:05 Mixed timed set
+  (65 min): Problems from different topics in random order\, timed at the e
+ xam's pace (minutes per point of the real exam).\n13:10 Mark and log (20 m
+ in): Mark against the solutions. Every lost point goes into the mistakes l
+ og with its cause: concept\, setup\, algebra or time.
 END:VEVENT
 BEGIN:VEVENT
 UID:s52-20261123@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261123T163000
 DTEND;TZID=Europe/Helsinki:20261123T183000
 SUMMARY:Mock exam: Integral Calculus
 LOCATION:
-DESCRIPTION:full past exam\, timed\, closed book\, then mark it
+DESCRIPTION:full past exam\, timed\, closed book\, then mark it\n16:30 Mock
+  exam (90 min): A full past exam under exam conditions: real start time\, 
+ only the allowed aids\, phone in another room\, strictly timed.\n18:00 Mar
+ k and log (30 min): Mark against the solutions. Every lost point goes into
+  the mistakes log with its cause: concept\, setup\, algebra or time.
 END:VEVENT
 BEGIN:VEVENT
 UID:s53-20261123@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261123T090000
 DTEND;TZID=Europe/Helsinki:20261123T110000
 SUMMARY:Practice: Matrix Algebra
 LOCATION:
-DESCRIPTION:Inner products\, Cauchy-Schwarz\, projection\, Gram-Schmidt\, least squares
+DESCRIPTION:Inner products\, Cauchy-Schwarz\, projection\, Gram-Schmidt\, l
+ east squares\n09:00 Warm-up recall (10 min): Without notes\, redo two prob
+ lems from earlier topics or from the mistakes log.\n09:10 Setup drill (25 
+ min): Strategy drill: for 5-6 mixed statements only decide true or false a
+ nd the proof idea (direct\, contradiction\, induction\, counterexample).\n
+ 09:35 Mixed timed set (65 min): Problems from different topics in random o
+ rder\, timed at the exam's pace (minutes per point of the real exam).\n10:
+ 40 Mark and log (20 min): Mark against the solutions. Every lost point goe
+ s into the mistakes log with its cause: concept\, setup\, algebra or time.
 END:VEVENT
 BEGIN:VEVENT
 UID:s54-20261124@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261124T090000
 DTEND;TZID=Europe/Helsinki:20261124T110000
 SUMMARY:Mock exam: Matrix Algebra
 LOCATION:
-DESCRIPTION:full past exam\, timed\, closed book\, then mark it
+DESCRIPTION:full past exam\, timed\, closed book\, then mark it\n09:00 Mock
+  exam (90 min): A full past exam under exam conditions: real start time\, 
+ only the allowed aids\, phone in another room\, strictly timed.\n10:30 Mar
+ k and log (30 min): Mark against the solutions. Every lost point goes into
+  the mistakes log with its cause: concept\, setup\, algebra or time.
 END:VEVENT
 BEGIN:VEVENT
 UID:s55-20261124@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261124T113000
 DTEND;TZID=Europe/Helsinki:20261124T133000
 SUMMARY:Practice: Statistics II
 LOCATION:
-DESCRIPTION:Time series: stationarity\, ACF/PACF to ARMA(p\,q)\, ARIMA/SARIMA
+DESCRIPTION:Time series: stationarity\, ACF/PACF to ARMA(p\,q)\, ARIMA/SARI
+ MA\n11:30 Warm-up recall (10 min): Without notes\, redo two problems from 
+ earlier topics or from the mistakes log.\n11:40 Setup drill (25 min): Mode
+ l drill: for 5-6 mixed problems only name the distribution or model and th
+ e formula you would use. Then check.\n12:05 Mixed timed set (65 min): Prob
+ lems from different topics in random order\, timed at the exam's pace (min
+ utes per point of the real exam).\n13:10 Mark and log (20 min): Mark again
+ st the solutions. Every lost point goes into the mistakes log with its cau
+ se: concept\, setup\, algebra or time.
 END:VEVENT
 BEGIN:VEVENT
 UID:s56-20261125@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261125T163000
 DTEND;TZID=Europe/Helsinki:20261125T183000
 SUMMARY:Mock exam: Integral Calculus
 LOCATION:
-DESCRIPTION:full past exam\, timed\, closed book\, then mark it
+DESCRIPTION:full past exam\, timed\, closed book\, then mark it\n16:30 Mock
+  exam (90 min): A full past exam under exam conditions: real start time\, 
+ only the allowed aids\, phone in another room\, strictly timed.\n18:00 Mar
+ k and log (30 min): Mark against the solutions. Every lost point goes into
+  the mistakes log with its cause: concept\, setup\, algebra or time.
 END:VEVENT
 BEGIN:VEVENT
 UID:s57-20261125@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261125T183000
 DTEND;TZID=Europe/Helsinki:20261125T203000
 SUMMARY:Mock exam: Statistics II
 LOCATION:
-DESCRIPTION:full past exam\, timed\, closed book\, then mark it
+DESCRIPTION:full past exam\, timed\, closed book\, then mark it\n18:30 Mock
+  exam (90 min): A full past exam under exam conditions: real start time\, 
+ only the allowed aids\, phone in another room\, strictly timed.\n20:00 Mar
+ k and log (30 min): Mark against the solutions. Every lost point goes into
+  the mistakes log with its cause: concept\, setup\, algebra or time.
 END:VEVENT
 BEGIN:VEVENT
 UID:s58-20261126@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261126T090000
 DTEND;TZID=Europe/Helsinki:20261126T110000
 SUMMARY:Mock exam: Matrix Algebra
 LOCATION:
-DESCRIPTION:full past exam\, timed\, closed book\, then mark it
+DESCRIPTION:full past exam\, timed\, closed book\, then mark it\n09:00 Mock
+  exam (90 min): A full past exam under exam conditions: real start time\, 
+ only the allowed aids\, phone in another room\, strictly timed.\n10:30 Mar
+ k and log (30 min): Mark against the solutions. Every lost point goes into
+  the mistakes log with its cause: concept\, setup\, algebra or time.
 END:VEVENT
 BEGIN:VEVENT
 UID:s59-20261126@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261126T113000
 DTEND;TZID=Europe/Helsinki:20261126T133000
 SUMMARY:Practice: Integral Calculus
 LOCATION:
-DESCRIPTION:Physical applications: centre of mass\, work\, related rates + Double integrals over polygonal regions
+DESCRIPTION:Physical applications: centre of mass\, work\, related rates + 
+ Double integrals over polygonal regions\n11:30 Warm-up recall (10 min): Wi
+ thout notes\, redo two problems from earlier topics or from the mistakes l
+ og.\n11:40 Setup drill (25 min): For 5-6 mixed problems only sketch the re
+ gion and write the integral with its limits\, do not evaluate. Setup is wh
+ ere most points are lost.\n12:05 Mixed timed set (65 min): Problems from d
+ ifferent topics in random order\, timed at the exam's pace (minutes per po
+ int of the real exam).\n13:10 Mark and log (20 min): Mark against the solu
+ tions. Every lost point goes into the mistakes log with its cause: concept
+ \, setup\, algebra or time.
 END:VEVENT
 BEGIN:VEVENT
 UID:s60-20261127@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261127T163000
 DTEND;TZID=Europe/Helsinki:20261127T183000
 SUMMARY:Mock exam: Integral Calculus
 LOCATION:
-DESCRIPTION:full past exam\, timed\, closed book\, then mark it
+DESCRIPTION:full past exam\, timed\, closed book\, then mark it\n16:30 Mock
+  exam (90 min): A full past exam under exam conditions: real start time\, 
+ only the allowed aids\, phone in another room\, strictly timed.\n18:00 Mar
+ k and log (30 min): Mark against the solutions. Every lost point goes into
+  the mistakes log with its cause: concept\, setup\, algebra or time.
 END:VEVENT
 BEGIN:VEVENT
 UID:s61-20261127@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261127T183000
 DTEND;TZID=Europe/Helsinki:20261127T203000
 SUMMARY:Mock exam: Statistics II
 LOCATION:
-DESCRIPTION:full past exam\, timed\, closed book\, then mark it
+DESCRIPTION:full past exam\, timed\, closed book\, then mark it\n18:30 Mock
+  exam (90 min): A full past exam under exam conditions: real start time\, 
+ only the allowed aids\, phone in another room\, strictly timed.\n20:00 Mar
+ k and log (30 min): Mark against the solutions. Every lost point goes into
+  the mistakes log with its cause: concept\, setup\, algebra or time.
 END:VEVENT
 BEGIN:VEVENT
 UID:s62-20261128@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261128T090000
 DTEND;TZID=Europe/Helsinki:20261128T110000
 SUMMARY:Review: Matrix Algebra
 LOCATION:
-DESCRIPTION:formula sheet\, mistakes log\, one timed problem per topic
+DESCRIPTION:formula sheet\, mistakes log\, one timed problem per topic\n09:
+ 00 Formula sheet (50 min): Write the final formula sheet (or one-page summ
+ ary) from memory first\, then fill the gaps from your notes.\n09:50 Mistak
+ es log (70 min): Re-solve every mistakes-log entry from a blank page. Entr
+ ies you get right twice are done.
 END:VEVENT
 BEGIN:VEVENT
 UID:s63-20261128@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261128T113000
 DTEND;TZID=Europe/Helsinki:20261128T133000
 SUMMARY:Review: Matrix Algebra
 LOCATION:
-DESCRIPTION:formula sheet\, mistakes log\, one timed problem per topic
+DESCRIPTION:formula sheet\, mistakes log\, one timed problem per topic\n11:
+ 30 One problem per topic (95 min): One timed exam-level problem per topic\
+ , weakest topics first.\n13:05 Exam-day prep (25 min): Pack for tomorrow (
+ ID\, allowed aids\, route)\, set the time per question\, stop early and sl
+ eep. No new material.
 END:VEVENT
 BEGIN:VEVENT
 UID:s64-20261129@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261129T090000
 DTEND;TZID=Europe/Helsinki:20261129T110000
 SUMMARY:Review: Integral Calculus
 LOCATION:
-DESCRIPTION:formula sheet\, mistakes log\, one timed problem per topic
+DESCRIPTION:formula sheet\, mistakes log\, one timed problem per topic\n09:
+ 00 Formula sheet (25 min): Write the final formula sheet (or one-page summ
+ ary) from memory first\, then fill the gaps from your notes.\n09:25 Mistak
+ es log (35 min): Re-solve every mistakes-log entry from a blank page. Entr
+ ies you get right twice are done.\n10:00 One problem per topic (50 min): O
+ ne timed exam-level problem per topic\, weakest topics first.\n10:50 Exam-
+ day prep (10 min): Pack for tomorrow (ID\, allowed aids\, route)\, set the
+  time per question\, stop early and sleep. No new material.
 END:VEVENT
 BEGIN:VEVENT
 UID:s65-20261129@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261129T113000
 DTEND;TZID=Europe/Helsinki:20261129T133000
 SUMMARY:Review: Statistics II
 LOCATION:
-DESCRIPTION:formula sheet\, mistakes log\, one timed problem per topic
+DESCRIPTION:formula sheet\, mistakes log\, one timed problem per topic\n11:
+ 30 Formula sheet (25 min): Write the final formula sheet (or one-page summ
+ ary) from memory first\, then fill the gaps from your notes.\n11:55 Mistak
+ es log (35 min): Re-solve every mistakes-log entry from a blank page. Entr
+ ies you get right twice are done.\n12:30 One problem per topic (50 min): O
+ ne timed exam-level problem per topic\, weakest topics first.\n13:20 Exam-
+ day prep (10 min): Pack for tomorrow (ID\, allowed aids\, route)\, set the
+  time per question\, stop early and sleep. No new material.
 END:VEVENT
 BEGIN:VEVENT
 UID:e0-20261130@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261130T163000
 DTEND;TZID=Europe/Helsinki:20261130T193000
 SUMMARY:EXAM: Integral Calculus
@@ -606,7 +1233,7 @@ LOCATION:LUT Lappeenranta
 END:VEVENT
 BEGIN:VEVENT
 UID:e1-20261130@exam-schedule-system
-DTSTAMP:20261022T091446Z
+DTSTAMP:20261029T224132Z
 DTSTART;TZID=Europe/Helsinki:20261130T163000
 DTEND;TZID=Europe/Helsinki:20261130T193000
 SUMMARY:EXAM: Statistics II

@@ -21,3 +21,5 @@ jobs:
       - run: python -m pytest -q
       - name: Demo plan still builds
         run: python -m studyplan plan data/exams_lut_2026.json --md plan.md --ics plan.ics
+      - name: Demo guides still build
+        run: python -m studyplan guide data/exams_lut_nov_2026.json --out guides
